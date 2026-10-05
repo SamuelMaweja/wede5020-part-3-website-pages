@@ -1,0 +1,61 @@
+/*Universal Styles shared across each page*/
+
+  body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Fredoka', sans-serif;
+
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header {
+            display: grid;
+            justify-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+         nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+         nav a:hover {
+            background-color: blue;
+            color: white;
+        } 
+
+          footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 25px;
+            border-top: 1px solid gold;
+            text-align: center;
+        }
+
+        footer section {
+            display: grid;
+            gap: 10px;
+        }
+
+        footer li {
+            list-style: none;
+            color: white;
+
+        /*Index.html CSS*/
+
+         header img {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 350px;
+            height: 300px;
+            object-fit: contain;
+        }

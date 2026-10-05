@@ -6,11 +6,100 @@
     <meta name="author" content="Mpiana Samuel Maweja">
     <meta name="description" content="describe the business">
     <meta name="keywords" content="reservations, delivery, events">
-    <title>Villa Serenita</title> <!-- Each page will have different titles -->
+    <title>Welcome to the home of Italian cuisine</title> <!-- Each page will have different titles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+        /* Used a grid for its two-dimensional control */
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Fredoka', sans-serif;
+
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        /* Css to structure the header */
+        header {
+            display: grid;
+            justify-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Css to make the logo be on the top and center of the screen */
+        header img {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 350px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        /* Flexbox used to display the navigation in a one-dimensional row */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Css for the navigation options */
+        nav a {
+            color: gold;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Css to show the user that they are hovering over a navigation option */
+        nav a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        /* Css for the main section */
+        main {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            padding: 40px;
+        }
+
+        /* Css to display the footer in a grid */
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 25px;
+            border-top: 1px solid gold;
+            text-align: center;
+        }
+
+        footer section {
+            display: grid;
+            gap: 10px;
+        }
+
+        footer li {
+            list-style: none;
+            color: white;
+        }
+    </style>
 </head>    
 <body>
     <header> <!--Every page will have the same content for the header-->
-       <h1> Villa Serenita</h1>
         <img src="logo.jpg"
         width="350"
         height="300"
