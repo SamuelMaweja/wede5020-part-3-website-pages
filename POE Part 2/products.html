@@ -8,63 +8,281 @@
     <meta name="description" content="describe the business">
     <meta name="keywords" content="reservations, delivery, events">
      <!--info about the products-->
-</head>
-    <title>Courses</title>
-     <header> 
-        <img src="Carbonara.jpg"
-         width="250"
-        height="200"
-        alt="item on menu"> 
-        <b><p>Carbonara</p></b>
-        <h1>VillaSerenita's signature dish the carbonara.</h1>
-        <li> <b><h2>R130</h2></b></li>
 
-
-               <img src="Frutti.jpg"
-         width="250"
-        height="200"
-        alt="item on menu"> 
-        <li><b><p2>Frutti di mare</p2></b></li>
-        <h1>A classic seafood dish </h1>
-         <li> <b><h2>R110</h2></b></li>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
         
-         <img src="Cacio.jpg"
-         width="250"
-        height="200"
-        alt="item on menu"> 
-        <li><b><p>Cacio e pepe</p></b></li>
-        <h1>A simple but classic roman pasta dish</h1>
-         <li> <b><h2>R105</h2></b></li>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Fredoka', sans-serif;
 
-         
-        <img src="Risotto.jpg"
-        width="250"
-        height="200"
-        alt="item on menu"> 
-        <li><b><p>Risotto</p></b></li>
-        <h1> A creamy, slow-cooked rice dish made using starchy Italian rice and broth</h1>
-         <li> <b><h2>R70</h2></b></li>
+            display: grid;
+            min-height: 100vh;
+        }
 
-     
-        <img src="Aperol Spritz.jpg"
-         width="250"
-        height="200"
-        alt="item on menu"> 
-        <li><b><p>Aperol Spritz</p></b></li>
-        <h1> A bright orange pre-dinner drink made with Prosecco, Aperol, and soda water</h1>
-         <li> <b><h2>R85</h2></b></li>
+        header {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 40px;
+            justify-items: center;
+        }
+
+        /* Tables to help separate each product to help with readability */
+        table {
+            width: 90%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            border: 2px solid gold;
+            margin-bottom: 20px;
+
+            /* Animation settings will play when a user hovers over them so the user know which one has been selected */
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        /* Product hover animation Css */
+        table:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 0 25px gold;
+            border-color: white;
+            cursor: pointer;
+        }
+
+        /* Cells for the tables */
+        td {
+            border: 1px solid gold;
+            padding: 25px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Flexbox for the product information */
+        td {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Product images */
+        td img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid gold;
+            border-radius: 10px;
+
+            transition: transform 0.3s ease;
+        }
+
+        /* Image hover animation */
+        table:hover td img {
+            transform: scale(1.05);
+        }
+
+        /* Product names */
+        td p,
+        td p2 {
+            color: gold;
+            font-size: 24px;
+            margin: 0;
+
+            transition: color 0.3s ease;
+        }
+
+        /* Product name hover */
+        table:hover td p,
+        table:hover td p2 {
+            color: white;
+        }
+
+        /* Product descriptions */
+        td h1 {
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Product prices */
+        td h2 {
+            color: gold;
+            font-size: 24px;
+            margin: 0;
+
+            transition: transform 0.3s ease;
+        }
+
+        /* Price hover animation */
+        table:hover td h2 {
+            transform: scale(1.15);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Navigation options */
+        nav a {
+            color: gold;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Navigation hover effect */
+        nav a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        /* List items */
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+    <title>Courses</title>
+
+     <header> 
+
+    
+        <table>
+            <tr>
+                <td>
+                    <img src="Carbonara.jpg"
+                    width="250"
+                    height="200"
+                    alt="item on menu">
+
+                    <b><p>Carbonara</p></b>
+
+                    <h1>VillaSerenita's signature dish the carbonara.</h1>
+
+                    <li><b><h2>R130</h2></b></li>
+                </td>
+            </tr>
+        </table>
 
 
-          <img src="Campari.jpg"
-         width="250"
-        height="200"
-        alt="item on menu"> 
-        <li><b><p>Campari</p></b></li>
-        <h1> A deep red, bitter herbal liqueur often served on the rocks or with soda</h1>
-         <li> <b><h2>R90</h2></b></li>
-          <!--Users will see a list of the products-->
+       
+        <table>
+            <tr>
+                <td>
+                    <img src="Frutti.jpg"
+                    width="250"
+                    height="200"
+                    alt="item on menu">
 
+                    <li><b><p2>Frutti di mare</p2></b></li>
+
+                    <h1>A classic seafood dish</h1>
+
+                    <li><b><h2>R110</h2></b></li>
+                </td>
+            </tr>
+        </table>
+
+
+        <table>
+            <tr>
+                <td>
+                    <img src="Cacio.jpg"
+                    width="250"
+                    height="200"
+                    alt="item on menu">
+
+                    <li><b><p>Cacio e pepe</p></b></li>
+
+                    <h1>A simple but classic roman pasta dish</h1>
+
+                    <li><b><h2>R105</h2></b></li>
+                </td>
+            </tr>
+        </table>
+
+
+        <table>
+            <tr>
+                <td>
+                    <img src="Risotto.jpg"
+                    width="250"
+                    height="200"
+                    alt="item on menu">
+
+                    <li><b><p>Risotto</p></b></li>
+
+                    <h1>A creamy, slow-cooked rice dish made using starchy Italian rice and broth</h1>
+
+                    <li><b><h2>R70</h2></b></li>
+                </td>
+            </tr>
+        </table>
+
+
+       
+        <table>
+            <tr>
+                <td>
+                    <img src="Aperol Spritz.jpg"
+                    width="250"
+                    height="200"
+                    alt="item on menu">
+
+                    <li><b><p>Aperol Spritz</p></b></li>
+
+                    <h1>A bright orange pre-dinner drink made with Prosecco, Aperol, and soda water</h1>
+
+                    <li><b><h2>R85</h2></b></li>
+                </td>
+            </tr>
+        </table>
+
+
+        
+        <table>
+            <tr>
+                <td>
+                    <img src="Campari.jpg"
+                    width="250"
+                    height="200"
+                    alt="item on menu">
+
+                    <li><b><p>Campari</p></b></li>
+
+                    <h1>A deep red, bitter herbal liqueur often served on the rocks or with soda</h1>
+
+                    <li><b><h2>R90</h2></b></li>
+                </td>
+            </tr>
+        </table>
+
+        <!--Users will see a list of the products-->
 
         <nav>
             <ul>
@@ -75,5 +293,7 @@
                 <li><a href="products.html"> Courses</a></li>
             </ul>
         </nav>
+
      </header>
-        </html>
+
+</html>

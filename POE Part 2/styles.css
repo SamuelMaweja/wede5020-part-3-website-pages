@@ -174,4 +174,129 @@
             font-size: 16px;
         }
 
+        /*Enquiries.html Css*/
+
+        main p {
+            color: gold;
+            font-size: 30px;
+            margin: 0;
+        }
+
+          main p2 {
+            color: white;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+         main li {
+            list-style: none;
+            max-width: 700px;
+            padding: 20px;
+            border: 2px solid gold;
+            border-radius: 10px;
+        }
+
+         footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            border-top: 1px solid gold;
+            min-height: 50px;
+        }
+
+        /*Products.html Css*/
+
+         table {
+            width: 90%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            border: 2px solid gold;
+            margin-bottom: 20px;
+
+           
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+      
+        table:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 0 25px gold;
+            border-color: white;
+            cursor: pointer;
+        }
+
+       
+        td {
+            border: 1px solid gold;
+            padding: 25px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+      
+        td {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        td img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid gold;
+            border-radius: 10px;
+
+            transition: transform 0.3s ease;
+        }
+
+        table:hover td img {
+            transform: scale(1.05);
+        }
+
+    
+        td p,
+        td p2 {
+            color: gold;
+            font-size: 24px;
+            margin: 0;
+
+            transition: color 0.3s ease;
+        }
+
+       
+        table:hover td p,
+        table:hover td p2 {
+            color: white;
+        }
+
+    
+        td h1 {
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        td h2 {
+            color: gold;
+            font-size: 24px;
+            margin: 0;
+
+            transition: transform 0.3s ease;
+        }
+
+        
+        table:hover td h2 {
+            transform: scale(1.15);
+        }
+
+
+
     
