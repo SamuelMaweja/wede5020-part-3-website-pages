@@ -41,6 +41,17 @@
             object-fit: contain;
         }
 
+        /* Css specifically for Restaurant.jpg */
+        header img[src="Restaurant.jpg"] {
+            width: 800px;
+            height: 600px;
+            object-fit: cover;
+            border: 3px solid gold;
+            border-radius: 10px;
+            margin: 20px auto 30px auto;
+            box-shadow: 0 0 20px gold;
+        }
+
         /* Flexbox used to display the navigation in a one-dimensional row */
         nav ul {
             display: flex;
@@ -104,6 +115,12 @@
         width="350"
         height="300"
         alt="VillaSerenita's logo"> 
+
+        <img src="Restaurant.jpg"
+        width="800"
+        height="600"
+        alt="VillaSerenita's logo">
+
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li> <!--Creating links to go to the home section-->
