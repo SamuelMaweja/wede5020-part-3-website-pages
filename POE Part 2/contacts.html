@@ -7,6 +7,8 @@
     <meta name="author" content="Mpiana Samuel Maweja">
     <meta name="description" content="describe the business">
     <meta name="keywords" content="reservations, delivery, events">
+    <link rel="stylesheet"
+     href="styles.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
@@ -20,6 +22,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            width: 100%;
         }
 
         header {
@@ -27,14 +30,16 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 30px;
+            padding: 2rem;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         
         header h1 {
             color: gold;
-            font-size: 35px;
-            margin-bottom: 30px;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
         }
 
         nav {
@@ -47,19 +52,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
+            flex-wrap: wrap;
+            gap: 1.5em;
             list-style: none;
             padding: 0;
             margin: 0;
+            width: 100%;
         }
 
         nav a {
             color: gold;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: 500;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 0.6em 0.9em;
+            border-radius: 0.3em;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -75,21 +82,25 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 1.25em;
             flex: 1;
-            padding: 50px;
+            padding: 3.125rem;
             text-align: center;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         /* Contact information */
         main li {
             list-style: none;
             color: white;
-            font-size: 22px;
-            padding: 15px 30px;
-            border: 2px solid gold;
-            border-radius: 10px;
-            min-width: 350px;
+            font-size: 1.375rem;
+            padding: 0.75em 1.5em;
+            border: 0.125em solid gold;
+            border-radius: 0.6rem;
+            width: 60%;
+            max-width: 31.25rem;
+            box-sizing: border-box;
         }
 
         /* Footer */
@@ -97,8 +108,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 30px;
-            border-top: 1px solid gold;
+            padding: 1.875rem;
+            border-top: 0.0625rem solid gold;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         /* Social media section */
@@ -106,17 +119,99 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 0.625em;
+            width: 100%;
         }
 
         footer li {
             list-style: none;
             color: white;
-            font-size: 16px;
+            font-size: 1rem;
+        }
+
+        /* Responsive design for tablets */
+        @media (max-width: 60em) {
+
+            header {
+                padding: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1em;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 0.6em 0.8em;
+            }
+
+            main {
+                padding: 2.5rem;
+            }
+
+            main li {
+                width: 75%;
+                font-size: 1.2rem;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Responsive design for phones */
+        @media (max-width: 40em) {
+
+            header {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.7rem;
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            nav a {
+                display: block;
+                font-size: 1rem;
+                padding: 0.6em 1em;
+            }
+
+            main {
+                padding: 2rem 1rem;
+                gap: 1em;
+            }
+
+            main li {
+                width: 95%;
+                min-width: 0;
+                font-size: 1.05rem;
+                padding: 0.8em 1em;
+            }
+
+            footer {
+                padding: 1.25rem 1rem;
+            }
+
+            footer li {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
+
     <title>Enquiries</title>
+
      <header> 
         <h1>Founded in 2015</h1>
         <nav>
@@ -129,15 +224,18 @@
             </ul>
         </nav>
     </header>
+
     <main> 
          <li>+27 64 734 8955</li>
          <li>VillaSerenitaEat@gmail.com</li>
-       </main>
+    </main>
+
     <footer>
           <section>
           <li> https://instagram.comVillaSerenita</li> <!-- social media links-->
            <li>https://Tiktok.comVillaSerenita</li>
         </section>
     </footer>
+
 </body>  
 </html>

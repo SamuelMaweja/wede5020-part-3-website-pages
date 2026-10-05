@@ -1,5 +1,6 @@
 /*Universal Styles shared across each page*/
-
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
   body {
             margin: 0;
             background-color: black;
@@ -32,13 +33,117 @@
             color: white;
         } 
 
-          footer {
+     
+        /*Index.html CSS*/
+
+         header img {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 350px;
+            height: 300px;
+            object-fit: contain;
+        }
+
+          header img[src="Restaurant.jpg"] {
+            width: 800px;
+            height: 600px;
+            object-fit: cover;
+            border: 3px solid gold;
+            border-radius: 10px;
+            margin: 20px auto 30px auto;
+            box-shadow: 0 0 20px gold;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+             footer {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             padding: 25px;
             border-top: 1px solid gold;
             text-align: center;
+
+             /*Index.html Responsive design*/
+        @media (max-width: 60em) {
+
+            header {
+                padding: 1.5rem;
+            }
+
+            header img {
+                width: 50%;
+            }
+
+            header img[src="Restaurant.jpg"] {
+                width: 90%;
+            }
+
+            nav ul {
+                gap: 1em;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 2rem;
+            }
+
+            footer {
+                gap: 1.5em;
+            }
+        }
+
+       
+        @media (max-width: 40em) {
+
+            header {
+                padding: 1rem;
+            }
+
+            header img {
+                width: 70%;
+            }
+
+            header img[src="Restaurant.jpg"] {
+                width: 100%;
+                margin: 1rem auto 1.5rem auto;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            nav a {
+                display: block;
+                font-size: 1rem;
+                padding: 0.6em 1em;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+                gap: 1em;
+                padding: 1.25rem;
+            }
+        }
+
         }
 
         footer section {
@@ -49,16 +154,55 @@
         footer li {
             list-style: none;
             color: white;
-
-        /*Index.html CSS*/
-
-         header img {
-            display: block;
-            margin: 0 auto 20px auto;
-            width: 350px;
-            height: 300px;
-            object-fit: contain;
         }
+
+        <picture>
+            <source
+                media="(max-width: 40em)"
+                srcset="logo.jpg"
+                sizes="70vw">
+
+            <source
+                media="(max-width: 60em)"
+                srcset="logo.jpg"
+                sizes="50vw">
+
+            <img
+                src="logo.jpg"
+                srcset="logo.jpg 350w,
+                        logo.jpg 700w,
+                        logo.jpg 1050w"
+                sizes="(max-width: 40em) 70vw,
+                       (max-width: 60em) 50vw,
+                       45vw"
+                width="350"
+                height="300"
+                alt="VillaSerenita's logo">
+        </picture>
+
+        <picture>
+            <source
+                media="(max-width: 40em)"
+                srcset="Restaurant.jpg"
+                sizes="100vw">
+
+            <source
+                media="(max-width: 60em)"
+                srcset="Restaurant.jpg"
+                sizes="90vw">
+
+            <img
+                src="Restaurant.jpg"
+                srcset="Restaurant.jpg 600w,
+                        Restaurant.jpg 900w,
+                        Restaurant.jpg 1200w"
+                sizes="(max-width: 40em) 100vw,
+                       (max-width: 60em) 90vw,
+                       80vw"
+                width="800"
+                height="600"
+                alt="VillaSerenita's restaurant">
+        </picture>
 
         /*About.html CSS*/
 
@@ -119,7 +263,7 @@
             font-size: 28px;
         }
 
-        /* Footer */
+        
         footer {
             display: flex;
             justify-content: center;
@@ -130,6 +274,211 @@
             font-size: 16px;
             line-height: 1.6;
         }
+        
+         /* About.html Responsive design */
+        @media (max-width: 60em) {
+
+            header {
+                padding: 1.5rem;
+            }
+
+            header > h1,
+            header > h2,
+            header > p,
+            header > p2,
+            header > li {
+                width: 90%;
+            }
+
+            picture img {
+                width: 50%;
+            }
+
+            header img {
+                width: 50%;
+                margin-right: 0;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            p,
+            p2,
+            p3,
+            p4 {
+                font-size: 1.05rem;
+            }
+
+            nav ul {
+                gap: 1em;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 2rem;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+        }
+
+        
+        @media (max-width: 40em) {
+
+            header {
+                padding: 1rem;
+            }
+
+            header > h1,
+            header > h2,
+            header > p,
+            header > p2,
+            header > li {
+                width: 95%;
+            }
+
+            picture {
+                width: 100%;
+            }
+
+            picture img {
+                width: 80%;
+                max-width: 350px;
+            }
+
+            header img {
+                width: 80%;
+                height: auto;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                margin-top: 2rem;
+            }
+
+            h2 {
+                font-size: 1.15rem;
+            }
+
+            p,
+            p2,
+            p3,
+            p4 {
+                width: 95%;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            nav {
+                margin-top: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            nav a {
+                display: block;
+                font-size: 1rem;
+                padding: 0.6em 1em;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+
+            main b {
+                font-size: 1.5rem;
+            }
+
+            footer {
+                padding: 1.25rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        <picture>
+            <source
+                media="(max-width: 40em)"
+                srcset="Luca.jpg"
+                sizes="80vw">
+
+            <source
+                media="(max-width: 60em)"
+                srcset="Luca.jpg"
+                sizes="50vw">
+
+            <img
+                src="Luca.jpg"
+                srcset="Luca.jpg 350w,
+                        Luca.jpg 700w,
+                        Luca.jpg 1050w"
+                sizes="(max-width: 40em) 80vw,
+                       (max-width: 60em) 50vw,
+                       35vw"
+                width="350"
+                height="300"
+                alt="image of owner">
+        </picture>
+
+        <picture>
+            <source
+                media="(max-width: 40em)"
+                srcset="Bowen .jpg"
+                sizes="80vw">
+
+            <source
+                media="(max-width: 60em)"
+                srcset="Bowen .jpg"
+                sizes="50vw">
+
+            <img
+                src="Bowen .jpg"
+                srcset="Bowen .jpg 350w,
+                        Bowen .jpg 700w,
+                        Bowen .jpg 1050w"
+                sizes="(max-width: 40em) 80vw,
+                       (max-width: 60em) 50vw,
+                       35vw"
+                width="350"
+                height="300"
+                alt="image of Sous chef">
+        </picture>
+
+         <picture>
+            <source
+                media="(max-width: 40em)"
+                srcset="Franklin.jpg"
+                sizes="80vw">
+
+            <source
+                media="(max-width: 60em)"
+                srcset="Franklin.jpg"
+                sizes="50vw">
+
+            <img
+                src="Franklin.jpg"
+                srcset="Franklin.jpg 350w,
+                        Franklin.jpg 700w,
+                        Franklin.jpg 1050w"
+                sizes="(max-width: 40em) 80vw,
+                       (max-width: 60em) 50vw,
+                       35vw"
+                width="350"
+                height="300"
+                alt="image of General Manager">
+        </picture>
 
         /*Contact.html Css*/
          main {
@@ -173,7 +522,85 @@
             color: white;
             font-size: 16px;
         }
+        
+         /* Contacts.html Responsive design */
+        @media (max-width: 60em) {
 
+            header {
+                padding: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1em;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 0.6em 0.8em;
+            }
+
+            main {
+                padding: 2.5rem;
+            }
+
+            main li {
+                width: 75%;
+                font-size: 1.2rem;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+        }
+
+        
+        @media (max-width: 40em) {
+
+            header {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.7rem;
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            nav a {
+                display: block;
+                font-size: 1rem;
+                padding: 0.6em 1em;
+            }
+
+            main {
+                padding: 2rem 1rem;
+                gap: 1em;
+            }
+
+            main li {
+                width: 95%;
+                min-width: 0;
+                font-size: 1.05rem;
+                padding: 0.8em 1em;
+            }
+
+            footer {
+                padding: 1.25rem 1rem;
+            }
+
+            footer li {
+                font-size: 0.95rem;
+            }
+        }
         /*Enquiries.html Css*/
 
         main p {
@@ -205,6 +632,97 @@
             min-height: 50px;
         }
 
+        
+        /* Enquries.html Responsive design */
+        @media (max-width: 60em) {
+
+            header {
+                padding: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                gap: 1em;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 0.6em 0.8em;
+            }
+
+            main {
+                padding: 2.5rem 5%;
+            }
+
+            main p {
+                font-size: 1.6rem;
+            }
+
+            main p2 {
+                font-size: 1.1rem;
+            }
+
+            main li {
+                width: 85%;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+        }
+
+        
+        @media (max-width: 40em) {
+
+            header {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.7rem;
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            nav a {
+                display: block;
+                font-size: 1rem;
+                padding: 0.6em 1em;
+            }
+
+            main {
+                padding: 2rem 1rem;
+                gap: 1em;
+            }
+
+            main p {
+                font-size: 1.4rem;
+                width: 95%;
+            }
+
+            main p2 {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            main li {
+                width: 95%;
+                padding: 1rem;
+            }
+
+            footer {
+                padding: 1.25rem 1rem;
+                min-height: 2.5rem;
+            }
+        }
         /*Products.html Css*/
 
          table {
@@ -296,7 +814,249 @@
         table:hover td h2 {
             transform: scale(1.15);
         }
+          /* Products.html Responsive design */
+        @media (max-width: 60em) {
 
+            header {
+                gap: 1.5rem;
+                padding: 2rem 4%;
+            }
 
+            table {
+                width: 90%;
+            }
 
-    
+            td {
+                padding: 1.25rem;
+            }
+
+            td img {
+                width: 50%;
+            }
+
+            td p,
+            td p2 {
+                font-size: 1.35rem;
+            }
+
+            td h1 {
+                font-size: 1.1rem;
+                width: 95%;
+            }
+
+            td h2 {
+                font-size: 1.35rem;
+            }
+
+            nav ul {
+                gap: 1em;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+        }
+
+        
+        @media (max-width: 40em) {
+
+            header {
+                gap: 1rem;
+                padding: 1.5rem 2%;
+            }
+
+            table {
+                width: 95%;
+                margin-bottom: 1rem;
+            }
+
+            table:hover {
+                transform: translateY(-0.3rem) scale(1.01);
+                box-shadow: 0 0 1rem gold;
+            }
+
+            td {
+                padding: 1rem;
+                gap: 0.75em;
+            }
+
+            td img {
+                width: 75%;
+                max-width: 15.625rem;
+            }
+
+            td p,
+            td p2 {
+                font-size: 1.2rem;
+            }
+
+            td h1 {
+                font-size: 1rem;
+                width: 100%;
+                line-height: 1.5;
+            }
+
+            td h2 {
+                font-size: 1.25rem;
+            }
+
+            nav {
+                margin-top: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            nav a {
+                display: block;
+                font-size: 1rem;
+                padding: 0.6em 1em;
+            }
+        }
+
+         <picture>
+                        <source
+                            media="(max-width: 40em)"
+                            srcset="Carbonara.jpg"
+                            sizes="75vw">
+
+                        <source
+                            media="(max-width: 60em)"
+                            srcset="Carbonara.jpg"
+                            sizes="50vw">
+
+                        <img
+                            src="Carbonara.jpg"
+                            srcset="Carbonara.jpg 250w,
+                                    Carbonara.jpg 500w,
+                                    Carbonara.jpg 750w"
+                            sizes="(max-width: 40em) 75vw,
+                                   (max-width: 60em) 50vw,
+                                   40vw"
+                            width="250"
+                            height="200"
+                            alt="item on menu">
+                    </picture>
+
+                    <picture>
+                        <source
+                            media="(max-width: 40em)"
+                            srcset="Frutti.jpg"
+                            sizes="75vw">
+
+                        <source
+                            media="(max-width: 60em)"
+                            srcset="Frutti.jpg"
+                            sizes="50vw">
+
+                        <img
+                            src="Frutti.jpg"
+                            srcset="Frutti.jpg 250w,
+                                    Frutti.jpg 500w,
+                                    Frutti.jpg 750w"
+                            sizes="(max-width: 40em) 75vw,
+                                   (max-width: 60em) 50vw,
+                                   40vw"
+                            width="250"
+                            height="200"
+                            alt="item on menu">
+                    </picture>
+
+                    <picture>
+                        <source
+                            media="(max-width: 40em)"
+                            srcset="Cacio.jpg"
+                            sizes="75vw">
+
+                        <source
+                            media="(max-width: 60em)"
+                            srcset="Cacio.jpg"
+                            sizes="50vw">
+
+                        <img
+                            src="Cacio.jpg"
+                            srcset="Cacio.jpg 250w,
+                                    Cacio.jpg 500w,
+                                    Cacio.jpg 750w"
+                            sizes="(max-width: 40em) 75vw,
+                                   (max-width: 60em) 50vw,
+                                   40vw"
+                            width="250"
+                            height="200"
+                            alt="item on menu">
+                    </picture>
+
+                     <picture>
+                        <source
+                            media="(max-width: 40em)"
+                            srcset="Risotto.jpg"
+                            sizes="75vw">
+
+                        <source
+                            media="(max-width: 60em)"
+                            srcset="Risotto.jpg"
+                            sizes="50vw">
+
+                        <img
+                            src="Risotto.jpg"
+                            srcset="Risotto.jpg 250w,
+                                    Risotto.jpg 500w,
+                                    Risotto.jpg 750w"
+                            sizes="(max-width: 40em) 75vw,
+                                   (max-width: 60em) 50vw,
+                                   40vw"
+                            width="250"
+                            height="200"
+                            alt="item on menu">
+                    </picture>
+
+                    <picture>
+                        <source
+                            media="(max-width: 40em)"
+                            srcset="Aperol Spritz.jpg"
+                            sizes="75vw">
+
+                        <source
+                            media="(max-width: 60em)"
+                            srcset="Aperol Spritz.jpg"
+                            sizes="50vw">
+
+                        <img
+                            src="Aperol Spritz.jpg"
+                            srcset="Aperol Spritz.jpg 250w,
+                                    Aperol Spritz.jpg 500w,
+                                    Aperol Spritz.jpg 750w"
+                            sizes="(max-width: 40em) 75vw,
+                                   (max-width: 60em) 50vw,
+                                   40vw"
+                            width="250"
+                            height="200"
+                            alt="item on menu">
+                    </picture>
+
+                    <picture>
+                        <source
+                            media="(max-width: 40em)"
+                            srcset="Campari.jpg"
+                            sizes="75vw">
+
+                        <source
+                            media="(max-width: 60em)"
+                            srcset="Campari.jpg"
+                            sizes="50vw">
+
+                        <img
+                            src="Campari.jpg"
+                            srcset="Campari.jpg 250w,
+                                    Campari.jpg 500w,
+                                    Campari.jpg 750w"
+                            sizes="(max-width: 40em) 75vw,
+                                   (max-width: 60em) 50vw,
+                                   40vw"
+                            width="250"
+                            height="200"
+                            alt="item on menu">
+                    </picture>
+                     </style>

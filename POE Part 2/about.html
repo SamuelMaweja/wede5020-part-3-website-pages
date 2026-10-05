@@ -7,6 +7,8 @@
     <meta name="author" content="Mpiana Samuel Maweja">
     <meta name="description" content="describe the business">
     <meta name="keywords" content="reservations, delivery, events">
+    <link rel="stylesheet"
+     href="styles.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
@@ -17,6 +19,8 @@
             background-color: black;
             color: white;
             font-family: 'Fredoka', sans-serif;
+            width: 100%;
+            min-height: 100%;
         }
 
         /* Header */
@@ -24,7 +28,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 30px;
+            padding: 2rem;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         /* Info for staff */
@@ -34,30 +40,49 @@
         header > p,
         header > p2,
         header > li {
-            max-width: 1100px;
+            max-width: 68.75rem;
+            width: 90%;
+            box-sizing: border-box;
         }
 
         /* Staff images */
         header img {
-            width: 350px;
-            height: 300px;
+            width: 35%;
+            height: auto;
+            max-width: 350px;
+            max-height: 300px;
+            aspect-ratio: 7 / 6;
             object-fit: cover;
-            margin: 20px 30px 20px 0;
-            border-radius: 10px;
-            border: 3px solid gold;
+            margin: 1.25rem 1.875rem 1.25rem 0;
+            border-radius: 0.6rem;
+            border: 0.2em solid gold;
+        }
+
+        /* Responsive image containers */
+        picture {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        picture img {
+            width: 35%;
+            height: auto;
+            max-width: 350px;
         }
 
         /* Staff headings */
         h1 {
             color: gold;
-            font-size: 32px;
-            margin-top: 40px;
+            font-size: 2rem;
+            margin-top: 2.5rem;
             text-align: center;
         }
 
         h2 {
             color: white;
-            font-size: 22px;
+            font-size: 1.375rem;
             text-align: center;
         }
 
@@ -67,9 +92,11 @@
         p3,
         p4 {
             color: white;
-            font-size: 18px;
+            font-size: 1.125rem;
             line-height: 1.7;
-            margin: 15px 0;
+            margin: 0.9rem 0;
+            width: 90%;
+            max-width: 68.75rem;
         }
 
         /* List items */
@@ -80,27 +107,36 @@
 
         /* Navigation */
         nav {
-            margin-top: 40px;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            /* Makes navigation appear above all other information */
+            order: -1;
         }
 
         nav ul {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
+            flex-wrap: wrap;
+            gap: 1.5em;
             list-style: none;
             padding: 0;
             margin: 0;
+            width: 100%;
         }
 
         /* Css for Navigation options */
         nav a {
             color: gold;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: 500;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 0.6em 0.9em;
+            border-radius: 0.3em;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -115,36 +151,199 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 40px;
+            padding: 2.5rem;
             text-align: center;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         main b {
             color: gold;
-            font-size: 28px;
+            font-size: 1.75rem;
         }
 
-        /* Footer */
+        
         footer {
             display: flex;
             justify-content: center;
             text-align: center;
-            padding: 30px;
-            border-top: 1px solid gold;
+            padding: 1.875rem;
+            border-top: 0.0625rem solid gold;
             color: white;
-            font-size: 16px;
+            font-size: 1rem;
             line-height: 1.6;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Responsive design for tablets */
+        @media (max-width: 60em) {
+
+            header {
+                padding: 1.5rem;
+            }
+
+            header > h1,
+            header > h2,
+            header > p,
+            header > p2,
+            header > li {
+                width: 90%;
+            }
+
+            picture img {
+                width: 50%;
+            }
+
+            header img {
+                width: 50%;
+                margin-right: 0;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            p,
+            p2,
+            p3,
+            p4 {
+                font-size: 1.05rem;
+            }
+
+            nav ul {
+                gap: 1em;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 2rem;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Responsive design for phones */
+        @media (max-width: 40em) {
+
+            header {
+                padding: 1rem;
+            }
+
+            header > h1,
+            header > h2,
+            header > p,
+            header > p2,
+            header > li {
+                width: 95%;
+            }
+
+            picture {
+                width: 100%;
+            }
+
+            picture img {
+                width: 80%;
+                max-width: 350px;
+            }
+
+            header img {
+                width: 80%;
+                height: auto;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+                margin-top: 2rem;
+            }
+
+            h2 {
+                font-size: 1.15rem;
+            }
+
+            p,
+            p2,
+            p3,
+            p4 {
+                width: 95%;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            nav {
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            nav a {
+                display: block;
+                font-size: 1rem;
+                padding: 0.6em 1em;
+            }
+
+            main {
+                padding: 1.5rem;
+            }
+
+            main b {
+                font-size: 1.5rem;
+            }
+
+            footer {
+                padding: 1.25rem;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
+
     <title>About Us</title>
+
      <header> 
+
         <h1>Luca Marchetti</h1> <!--info about the owner-->
-         <h2>Age: 37</h2>
-        <img src="Luca.jpg"
-         width="350"
-        height="300"
-        alt="image of owner"> 
+        <h2>Age: 37</h2>
+
+        <!-- Responsive image using picture, srcset and sizes -->
+        <picture>
+            <source
+                media="(max-width: 40em)"
+                srcset="Luca.jpg"
+                sizes="80vw">
+
+            <source
+                media="(max-width: 60em)"
+                srcset="Luca.jpg"
+                sizes="50vw">
+
+            <img
+                src="Luca.jpg"
+                srcset="Luca.jpg 350w,
+                        Luca.jpg 700w,
+                        Luca.jpg 1050w"
+                sizes="(max-width: 40em) 80vw,
+                       (max-width: 60em) 50vw,
+                       35vw"
+                width="350"
+                height="300"
+                alt="image of owner">
+        </picture>
+
         <P>Luca Marchetti is the founder and head chef of his restaurant VillaSerenita, a business built from his passion
          for authentic Italian cuisine and his desire to share the flavors and traditions of Italy with others.</P>
 
@@ -160,13 +359,34 @@
         Luca hopes to give South Africans the opportunity to experience Italy through every plate.</p4></li>
       
 
-
         <h1>Bowen Higgins</h1> <!--info about the sous chef-->
         <h2>Age: 31</h2>
-        <img src="Bowen .jpg"
-         width="350"
-        height="300"
-        alt="image of Sous chef"> 
+
+        <!-- Responsive image using picture, srcset and sizes -->
+        <picture>
+            <source
+                media="(max-width: 40em)"
+                srcset="Bowen .jpg"
+                sizes="80vw">
+
+            <source
+                media="(max-width: 60em)"
+                srcset="Bowen .jpg"
+                sizes="50vw">
+
+            <img
+                src="Bowen .jpg"
+                srcset="Bowen .jpg 350w,
+                        Bowen .jpg 700w,
+                        Bowen .jpg 1050w"
+                sizes="(max-width: 40em) 80vw,
+                       (max-width: 60em) 50vw,
+                       35vw"
+                width="350"
+                height="300"
+                alt="image of Sous chef">
+        </picture>
+
         <P>Bowen Higgins has built his career around a passion for food, creativity, and the art
         of bringing people together through exceptional dining experiences. As Sous Chef at VillaSerenita,
         Bowen plays an important role in the kitchen, working alongside the culinary team to maintain high
@@ -182,10 +402,32 @@
      
         <h1>Franklin Sierra</h1> <!--info about the sous chef-->
         <h2>Age: 45</h2>
-        <img src="Franklin.jpg"
-         width="350"
-        height="300"
-        alt="image of General Manager"> 
+
+        <!-- Responsive image using picture, srcset and sizes -->
+        <picture>
+            <source
+                media="(max-width: 40em)"
+                srcset="Franklin.jpg"
+                sizes="80vw">
+
+            <source
+                media="(max-width: 60em)"
+                srcset="Franklin.jpg"
+                sizes="50vw">
+
+            <img
+                src="Franklin.jpg"
+                srcset="Franklin.jpg 350w,
+                        Franklin.jpg 700w,
+                        Franklin.jpg 1050w"
+                sizes="(max-width: 40em) 80vw,
+                       (max-width: 60em) 50vw,
+                       35vw"
+                width="350"
+                height="300"
+                alt="image of General Manager">
+        </picture>
+
         <P>At 45 years old, Franklin Sierra brings years of experience, dedication, and leadership to his role as General Manager
         of VillaSerenita. With a strong passion for hospitality and creating memorable dining experiences, 
         Franklin takes pride in making sure every guest feels welcomed and valued.</P>
@@ -208,9 +450,11 @@
             </ul>
         </nav>
     </header>
+
     <main> <!--each page will have different information here-->
        <b>Tradition in every bite</b>
     </main>
+
     <footer>
         Villa Serenita is a authentic italian restaurant that strives to bring the people of South Africa quality italian dishes that will make you feel as though you were really in Italy            
 </body>  
