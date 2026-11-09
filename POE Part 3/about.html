@@ -2,24 +2,75 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Basic SEO -->
     <meta name="author" content="Mpiana Samuel Maweja">
-    <meta name="description" content="Meet the team behind VillaSerenita, an authentic Italian restaurant.">
-    <meta name="keywords" content="reservations, delivery, events, Italian restaurant">
 
-    <title>About Us - VillaSerenita</title>
+    <meta name="description"
+          content="Meet the team behind VillaSerenita, an Italian restaurant founded in 2015. Discover our founder, chefs and management team and learn about our passion for authentic Italian cuisine and hospitality in South Africa.">
+
+    <meta name="keywords"
+          content="VillaSerenita, about VillaSerenita, Italian restaurant South Africa, Italian cuisine, restaurant team, head chef, sous chef, restaurant management, authentic Italian food">
+
+    <meta name="robots" content="index, follow">
 
    
-    <link rel="stylesheet" href="styles.css">
+    <title>About Us | VillaSerenita Italian Restaurant & Our Team</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical"
+          href="https://www.VillaSerenitaEAT.co.za/about.html">
 
     
+    <meta property="og:type" content="website">
+
+    <meta property="og:title"
+          content="About VillaSerenita | Our Story and Team">
+
+    <meta property="og:description"
+          content="Discover the story behind VillaSerenita, founded in 2015, and meet the passionate team bringing authentic Italian cuisine to South Africa.">
+
+    <meta property="og:url"
+          content="https://www.VillaSerenitaEAT.co.za/about.html">
+
+    <meta property="og:image"
+          content="https://www.VillaSerenitaEAT.co.za/Luca.jpg">
+
+    <meta property="og:site_name" content="VillaSerenita">
+
+   
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
           rel="stylesheet">
+
+    <!-- Restaurant information structure-->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "VillaSerenita",
+        "description": "VillaSerenita is an Italian restaurant founded in 2015, bringing authentic Italian cuisine and hospitality to South Africa.",
+        "servesCuisine": "Italian",
+        "url": "https://www.VillaSerenitaEAT.co.za/",
+        "telephone": "+27647348955",
+        "email": "VillaSerenitaEat@gmail.com",
+        "foundingDate": "2015",
+        "sameAs": [
+            "https://instagram.com/VillaSerenita",
+            "https://tiktok.com/@VillaSerenita"
+        ]
+    }
+    </script>
+
 </head>
 
 <body>
@@ -27,43 +78,74 @@
     
     <header class="site-header">
 
-        <h1 class="page-title">About VillaSerenita</h1>
+        <h1 class="page-title">
+            About VillaSerenita Italian Restaurant
+        </h1>
 
-        <!-- Navigation -->
+        
         <nav aria-label="Main navigation">
+
             <ul class="navigation-list">
 
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" aria-current="page">About Us</a></li>
+
+                <li>
+                    <a href="about.html" aria-current="page">
+                        About Us
+                    </a>
+                </li>
+
                 <li><a href="enquiries.html">Help</a></li>
-                <li><a href="contacts.html">Contact Information</a></li>
+
+                <li>
+                    <a href="contacts.html">
+                        Contact Information
+                    </a>
+                </li>
+
                 <li><a href="products.html">Courses</a></li>
 
             </ul>
+
         </nav>
 
     </header>
 
-    <!-- Main staff information -->
+    <!-- Main Staff Information -->
     <main class="about-main">
+
+        <!-- Restaurant Story -->
+        <section class="about-introduction">
+
+            <h2>Our Story and Passion for Italian Cuisine</h2>
+
+            <p>
+                Founded in 2015, VillaSerenita is an Italian restaurant
+                built around a passion for authentic Italian cuisine,
+                quality ingredients and exceptional hospitality.
+                Our mission is to bring the traditions and flavours
+                of Italy to South Africa.
+            </p>
+
+        </section>
 
         <!-- Owner -->
         <article class="staff-card">
 
-            <h2 class="staff-name">Luca Marchetti</h2>
+            <h2 class="staff-name">
+                Luca Marchetti - Founder and Head Chef
+            </h2>
 
             <p class="staff-age">Age: 37</p>
 
-            <!-- Responsive owner image -->
+            <!-- Responsive Owner Image -->
             <picture class="staff-picture">
 
-                <source
-                    media="(max-width: 40em)"
-                    srcset="Luca.jpg">
+                <source media="(max-width: 40em)"
+                        srcset="Luca.jpg">
 
-                <source
-                    media="(max-width: 60em)"
-                    srcset="Luca.jpg">
+                <source media="(max-width: 60em)"
+                        srcset="Luca.jpg">
 
                 <img
                     src="Luca.jpg"
@@ -75,7 +157,9 @@
                            35vw"
                     width="350"
                     height="300"
-                    alt="Luca Marchetti, founder and head chef of VillaSerenita">
+                    loading="lazy"
+                    alt="Luca Marchetti, founder and head chef of VillaSerenita Italian restaurant">
+
             </picture>
 
             <div class="staff-description">
@@ -119,20 +203,20 @@
         <!-- Sous Chef -->
         <article class="staff-card">
 
-            <h2 class="staff-name">Bowen Higgins</h2>
+            <h2 class="staff-name">
+                Bowen Higgins - Sous Chef
+            </h2>
 
             <p class="staff-age">Age: 31</p>
 
-            <!-- Responsive sous chef image -->
+            <!-- Responsive Sous Chef Image -->
             <picture class="staff-picture">
 
-                <source
-                    media="(max-width: 40em)"
-                    srcset="Bowen .jpg">
+                <source media="(max-width: 40em)"
+                        srcset="Bowen .jpg">
 
-                <source
-                    media="(max-width: 60em)"
-                    srcset="Bowen .jpg">
+                <source media="(max-width: 60em)"
+                        srcset="Bowen .jpg">
 
                 <img
                     src="Bowen .jpg"
@@ -144,7 +228,9 @@
                            35vw"
                     width="350"
                     height="300"
-                    alt="Bowen Higgins, sous chef at VillaSerenita">
+                    loading="lazy"
+                    alt="Bowen Higgins, sous chef and member of the VillaSerenita kitchen team">
+
             </picture>
 
             <div class="staff-description">
@@ -179,20 +265,20 @@
         <!-- General Manager -->
         <article class="staff-card">
 
-            <h2 class="staff-name">Franklin Sierra</h2>
+            <h2 class="staff-name">
+                Franklin Sierra - General Manager
+            </h2>
 
             <p class="staff-age">Age: 45</p>
 
-            <!-- Responsive general manager image -->
+            <!-- Responsive General Manager Image -->
             <picture class="staff-picture">
 
-                <source
-                    media="(max-width: 40em)"
-                    srcset="Franklin.jpg">
+                <source media="(max-width: 40em)"
+                        srcset="Franklin.jpg">
 
-                <source
-                    media="(max-width: 60em)"
-                    srcset="Franklin.jpg">
+                <source media="(max-width: 60em)"
+                        srcset="Franklin.jpg">
 
                 <img
                     src="Franklin.jpg"
@@ -204,7 +290,9 @@
                            35vw"
                     width="350"
                     height="300"
-                    alt="Franklin Sierra, general manager of VillaSerenita">
+                    loading="lazy"
+                    alt="Franklin Sierra, general manager of VillaSerenita Italian restaurant">
+
             </picture>
 
             <div class="staff-description">
@@ -236,13 +324,34 @@
 
         </article>
 
-        <!-- Restaurant slogan -->
+        <!-- Restaurant Slogan -->
         <section class="about-slogan">
+
+            <h2>Our Philosophy</h2>
+
             <p>Tradition in every bite</p>
+
+        </section>
+
+        <!-- Internal SEO Links -->
+        <section class="about-links">
+
+            <h2>Discover More About VillaSerenita</h2>
+
+            <p>
+                Explore our
+                <a href="products.html">Italian restaurant menu</a>,
+                learn more about our
+                <a href="enquiries.html">customer enquiries</a>,
+                or visit our
+                <a href="contacts.html">contact information page</a>.
+            </p>
+
         </section>
 
     </main>
 
+    
     <footer class="site-footer">
 
         <p class="footer-description">
