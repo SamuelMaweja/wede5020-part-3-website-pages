@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,14 +36,55 @@
         </nav>
     </header>
 
-    <!-- This will dynamically load products -->
-    <main class="products-container" id="product-list">
+    <main class="products-container">
 
-        <!-- Here is where JavaScript will disply the products -->
+        <!-- Search and sorting section -->
+        <section class="product-controls">
+
+            <h2>Explore Our Menu</h2>
+
+            <!-- Search bar -->
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Search for a dish..."
+                aria-label="Search menu products"
+            >
+
+            <!-- Sorting options -->
+            <select id="sort-products" aria-label="Sort products">
+
+                <option value="default">Default Menu Order</option>
+
+                <option value="name-asc">Name (A-Z)</option>
+
+                <option value="price-asc">
+                    Price (Lowest to Highest)
+                </option>
+
+                <option value="price-desc">
+                    Price (Highest to Lowest)
+                </option>
+
+            </select>
+
+        </section>
+
+        <!-- Dynamically loaded products -->
+        <div id="product-list">
+
+            <!-- JavaScript displays products here -->
+
+        </div>
+
+        <!-- Message displayed when no products match -->
+        <p id="no-results" hidden>
+            Sorry, no products match your search.
+        </p>
 
     </main>
 
-    <!-- The Products listed within JavaScript -->
+    <!-- JavaScript product listings, searching and sorting -->
     <script src="js/products.js"></script>
 
 </body>

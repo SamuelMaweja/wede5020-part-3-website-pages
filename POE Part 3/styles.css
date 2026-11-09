@@ -1582,10 +1582,7 @@ a:active {
     }
 }
 
-
-
-        
-/*Font and general styling for the products page */
+/* Font and general styling for the products page */
 
 * {
     box-sizing: border-box;
@@ -1600,6 +1597,8 @@ body {
     font-family: 'Fredoka', sans-serif;
 }
 
+
+/* Header */
 
 header {
     display: grid;
@@ -1617,7 +1616,8 @@ header {
     margin: 0;
 }
 
-/*Navigation */
+
+/* Navigation */
 
 nav {
     display: flex;
@@ -1682,17 +1682,101 @@ nav a[aria-current="page"] {
 }
 
 
+/* Main products section */
+
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
+
     width: 100%;
     max-width: 75rem;
     margin: 0 auto;
     padding: 1.5rem 5%;
 }
 
+
+/* Search and sorting section */
+
+.product-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 100%;
+    max-width: 37.5rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.product-controls h2 {
+    color: gold;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0 0 0.5rem;
+}
+
+/* Search input and sorting dropdown */
+
+#search-input,
+#sort-products {
+    width: 100%;
+    padding: 0.9rem;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.5rem;
+
+    background-color: black;
+    color: white;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Search placeholder */
+
+#search-input::placeholder {
+    color: #cccccc;
+}
+
+/* Search and sorting focus */
+
+#search-input:focus,
+#sort-products:focus {
+    outline: 0.125rem solid white;
+    outline-offset: 0.2rem;
+    border-color: gold;
+    box-shadow: 0 0 0.6rem gold;
+}
+
+/* Dropdown options */
+
+#sort-products option {
+    background-color: black;
+    color: white;
+}
+
+
+/* Product listings grid */
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 2rem;
+
+    width: 100%;
+}
+
+
+/* Product cards */
 
 .product-card {
     display: flex;
@@ -1731,6 +1815,7 @@ nav a[aria-current="page"] {
 }
 
 
+/* Product images */
 
 .product-card picture {
     display: flex;
@@ -1760,6 +1845,7 @@ nav a[aria-current="page"] {
 }
 
 
+/* Product names */
 
 .product-name {
     color: gold;
@@ -1776,6 +1862,8 @@ nav a[aria-current="page"] {
 }
 
 
+/* Product descriptions */
+
 .product-description {
     color: white;
     font-size: 1.125rem;
@@ -1785,6 +1873,8 @@ nav a[aria-current="page"] {
     width: 90%;
 }
 
+
+/* Product prices */
 
 .product-price {
     color: gold;
@@ -1799,7 +1889,19 @@ nav a[aria-current="page"] {
     transform: scale(1.15);
 }
 
-/* Responsive tablet design*/
+
+/* No search results message */
+
+#no-results {
+    color: gold;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+    margin: 0;
+}
+
+
+/* Responsive tablet design */
 
 @media (max-width: 60em) {
 
@@ -1809,6 +1911,10 @@ nav a[aria-current="page"] {
     }
 
     .products-container {
+        gap: 1.5rem;
+    }
+
+    #product-list {
         gap: 1.5rem;
     }
 
@@ -1840,9 +1946,14 @@ nav a[aria-current="page"] {
     nav a {
         font-size: 1rem;
     }
+
+    .product-controls {
+        max-width: 32rem;
+    }
 }
 
-/*Responsive mobile design*/
+
+/* Responsive mobile design */
 
 @media (max-width: 40em) {
 
@@ -1852,9 +1963,13 @@ nav a[aria-current="page"] {
     }
 
     .products-container {
-        grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1rem 3%;
+    }
+
+    #product-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .product-card {
@@ -1899,9 +2014,23 @@ nav a[aria-current="page"] {
         font-size: 1rem;
         padding: 0.6em 1em;
     }
+
+    .product-controls {
+        padding: 1rem 0.5rem;
+    }
+
+    .product-controls h2 {
+        font-size: 1.5rem;
+    }
+
+    #search-input,
+    #sort-products {
+        font-size: 0.95rem;
+    }
 }
 
-/*Accessibility */
+
+/* Accessibility */
 
 /* Clear keyboard focus */
 
