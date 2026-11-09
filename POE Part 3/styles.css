@@ -2589,3 +2589,207 @@ a:active {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* 404 Error Page Styling */
+
+.error-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+    width: 100%;
+    min-height: 60vh;
+
+    padding: 3rem 1.5rem;
+
+    text-align: center;
+}
+
+/* Error container */
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.25rem;
+
+    width: 90%;
+    max-width: 45rem;
+
+    padding: 2.5rem;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.75rem;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Error container hover */
+
+.error-container:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 1rem gold;
+    border-color: white;
+}
+
+/* 404 error code */
+
+.error-code {
+    color: gold;
+
+    font-size: 6rem;
+    font-weight: 700;
+
+    margin: 0;
+}
+
+/* Error heading */
+
+.error-heading {
+    color: gold;
+
+    font-size: 2rem;
+    font-weight: 500;
+
+    margin: 0;
+}
+
+/* Error description */
+
+.error-description {
+    color: white;
+
+    font-size: 1.125rem;
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+/* Homepage button */
+
+.home-button {
+    display: inline-block;
+
+    background-color: gold;
+    color: black;
+
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+
+    padding: 0.8em 1.5em;
+
+    border-radius: 0.4rem;
+
+    margin-top: 0.75rem;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Homepage button hover */
+
+.home-button:hover {
+    background-color: blue;
+    color: white;
+
+    transform: translateY(-0.2rem);
+}
+
+/* Homepage button keyboard focus */
+
+.home-button:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.3rem;
+}
+
+/* Homepage button active */
+
+.home-button:active {
+    transform: scale(0.95);
+}
+
+
+/* Tablet responsive design */
+
+@media (max-width: 60em) {
+
+    .error-main {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .error-container {
+        width: 95%;
+        padding: 2rem;
+    }
+
+    .error-code {
+        font-size: 5rem;
+    }
+
+    .error-heading {
+        font-size: 1.7rem;
+    }
+
+    .error-description {
+        font-size: 1.05rem;
+    }
+
+}
+
+
+/* Mobile responsive design */
+
+@media (max-width: 40em) {
+
+    .error-main {
+        padding: 2rem 1rem;
+    }
+
+    .error-container {
+        width: 100%;
+        padding: 1.5rem 1rem;
+
+        gap: 1rem;
+    }
+
+    .error-code {
+        font-size: 4rem;
+    }
+
+    .error-heading {
+        font-size: 1.5rem;
+    }
+
+    .error-description {
+        font-size: 1rem;
+    }
+
+    .home-button {
+        font-size: 1rem;
+        padding: 0.8em 1.2em;
+    }
+
+}
+
+
+/* Accessibility - Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .error-container,
+    .home-button {
+        transition: none;
+    }
+
+}
