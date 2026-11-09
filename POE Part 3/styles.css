@@ -830,6 +830,7 @@ a:active {
 }
 
        
+
 /*Contact page styling*/
 
 * {
@@ -1049,6 +1050,235 @@ nav a[aria-current="page"] {
 }
 
 
+/* General Contact Message Form */
+
+.contact-form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 80%;
+    max-width: 43.75rem;
+
+    margin: 2rem auto;
+    padding: 2rem;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.6rem;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Contact form hover */
+
+.contact-form-section:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 1rem gold;
+    border-color: white;
+}
+
+/* Contact form heading */
+
+.contact-form-section h2 {
+    color: gold;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Contact form description */
+
+.contact-form-section p {
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Contact form */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 1.25rem;
+
+    text-align: left;
+}
+
+/* Contact form groups */
+
+#contactForm .form-group {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 0.5rem;
+}
+
+/* Contact form labels */
+
+#contactForm label {
+    color: gold;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Contact form input fields */
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+
+    padding: 0.85rem;
+
+    background-color: #151515;
+    color: white;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.4rem;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Contact form placeholder */
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+}
+
+/* Contact form input hover */
+
+#contactForm input:hover,
+#contactForm textarea:hover {
+    border-color: white;
+}
+
+/* Contact form input focus */
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: white;
+    box-shadow: 0 0 0.6rem gold;
+    background-color: #202020;
+}
+
+/* Contact message textarea */
+
+#contactForm textarea {
+    min-height: 12rem;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Contact form keyboard focus */
+
+#contactForm input:focus-visible,
+#contactForm textarea:focus-visible {
+    outline: 0.15rem solid gold;
+    outline-offset: 0.2rem;
+}
+
+/* Contact form submit button */
+
+#submitButton {
+    display: block;
+
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+
+    background-color: gold;
+    color: black;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.4rem;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Submit button hover */
+
+#submitButton:hover:not(:disabled) {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+    box-shadow: 0 0 0.8rem gold;
+}
+
+/* Submit button focus */
+
+#submitButton:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Submit button active */
+
+#submitButton:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+/* Submit button disabled */
+
+#submitButton:disabled {
+    background-color: #777;
+    color: white;
+    border-color: #777;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Contact form response messages */
+
+#formResponse {
+    width: 100%;
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Contact form validation */
+
+#contactForm input:invalid:not(:placeholder-shown),
+#contactForm textarea:invalid:not(:placeholder-shown) {
+    border-color: #ff5555;
+}
+
+/* Contact form valid fields */
+
+#contactForm input:valid:not(:placeholder-shown),
+#contactForm textarea:valid:not(:placeholder-shown) {
+    border-color: gold;
+}
+
+
 
 .site-footer {
     display: flex;
@@ -1159,6 +1389,13 @@ nav a[aria-current="page"] {
         padding: 0.8em 1em;
     }
 
+    /* Tablet contact form */
+
+    .contact-form-section {
+        width: 85%;
+        padding: 1.75rem;
+    }
+
     .site-footer {
         padding: 1.5rem;
     }
@@ -1219,6 +1456,36 @@ nav a[aria-current="page"] {
         word-break: break-word;
     }
 
+    /* Mobile contact form */
+
+    .contact-form-section {
+        width: 95%;
+        padding: 1.25rem;
+    }
+
+    .contact-form-section h2 {
+        font-size: 1.5rem;
+    }
+
+    #contactForm {
+        gap: 1rem;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    #contactForm textarea {
+        min-height: 10rem;
+    }
+
+    #submitButton {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
     .site-footer {
         padding: 1.25rem 1rem;
     }
@@ -1255,6 +1522,8 @@ a:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+
 /* VillaSerenita interactive map styling */
 
 .location-section {
