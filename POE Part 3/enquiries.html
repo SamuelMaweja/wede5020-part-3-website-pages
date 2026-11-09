@@ -4,11 +4,30 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Security Settings -->
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   script-src 'self';
+                   style-src 'self' https://fonts.googleapis.com;
+                   font-src 'self' https://fonts.gstatic.com;
+                   img-src 'self' data:;
+                   object-src 'none';
+                   base-uri 'self';
+                   form-action 'self';
+                   upgrade-insecure-requests;">
+
+    <meta name="referrer"
+          content="strict-origin-when-cross-origin">
 
     <!-- SEO Information -->
 
-    <meta name="author" content="Mpiana Samuel Maweja">
+    <meta name="author"
+          content="Mpiana Samuel Maweja">
 
     <meta name="description"
           content="Have questions about VillaSerenita Italian Restaurant? Send us an enquiry about our menu, reservations, delivery services and courses.">
@@ -16,7 +35,8 @@
     <meta name="keywords"
           content="VillaSerenita enquiries, Italian restaurant enquiries, restaurant reservations, food enquiries, delivery enquiries, customer support">
 
-    <meta name="robots" content="index, follow">
+    <meta name="robots"
+          content="index, follow">
 
     <title>Enquiries | Contact VillaSerenita Italian Restaurant</title>
 
@@ -25,7 +45,10 @@
     <link rel="canonical"
           href="https://www.VillaSerenitaEAT.co.za/enquiries.html">
 
-    <meta property="og:type" content="website">
+    <!-- Open Graph SEO -->
+
+    <meta property="og:type"
+          content="website">
 
     <meta property="og:title"
           content="Enquiries | VillaSerenita Italian Restaurant">
@@ -39,16 +62,22 @@
     <meta property="og:image"
           content="https://www.VillaSerenitaEAT.co.za/Restaurant.jpg">
 
-    <meta property="og:site_name" content="VillaSerenita">
+    <meta property="og:site_name"
+          content="VillaSerenita">
 
     <!-- External CSS -->
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+          href="styles.css">
 
     <!-- Fonts -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
           rel="stylesheet">
@@ -56,6 +85,7 @@
     <!-- Restaurant Structured Data -->
 
     <script type="application/ld+json">
+
     {
         "@context": "https://schema.org",
         "@type": "Restaurant",
@@ -70,7 +100,13 @@
             "https://tiktok.com/@VillaSerenita"
         ]
     }
+
     </script>
+
+    <!-- External Secure JavaScript -->
+
+    <script src="js/enquiries.js"
+            defer></script>
 
 </head>
 
@@ -99,7 +135,8 @@
                 </li>
 
                 <li>
-                    <a href="enquiries.html" aria-current="page">
+                    <a href="enquiries.html"
+                       aria-current="page">
                         Help
                     </a>
                 </li>
@@ -120,7 +157,6 @@
 
     </header>
 
-
     <!-- Main Enquiry Section -->
 
     <main class="enquiry-main">
@@ -138,7 +174,6 @@
 
         </p>
 
-
         <!-- Enquiry Form Container -->
 
         <section class="enquiry-container">
@@ -152,11 +187,10 @@
 
             </p>
 
-
             <!-- Enquiry Form -->
 
-            <form id="enquiryForm">
-
+            <form id="enquiryForm"
+                  method="POST">
 
                 <!-- Full Name -->
 
@@ -174,11 +208,11 @@
                         minlength="3"
                         maxlength="60"
                         pattern="[A-Za-zÀ-ÿ '-]{3,60}"
+                        autocomplete="name"
                         title="Enter a name containing 3 to 60 letters."
                         required>
 
                 </div>
-
 
                 <!-- Email Address -->
 
@@ -194,10 +228,10 @@
                         name="email"
                         placeholder="example@email.com"
                         maxlength="100"
+                        autocomplete="email"
                         required>
 
                 </div>
-
 
                 <!-- Phone Number -->
 
@@ -213,10 +247,11 @@
                         name="phone"
                         placeholder="+27 64 734 8955"
                         pattern="[+]?[0-9 ()-]{7,20}"
+                        maxlength="20"
+                        autocomplete="tel"
                         title="Enter a valid phone number containing 7 to 20 characters.">
 
                 </div>
-
 
                 <!-- Enquiry Category -->
 
@@ -255,7 +290,6 @@
 
                 </div>
 
-
                 <!-- Preferred Date -->
 
                 <div class="form-group">
@@ -270,7 +304,6 @@
                         name="preferredDate">
 
                 </div>
-
 
                 <!-- Enquiry Message -->
 
@@ -291,21 +324,21 @@
 
                 </div>
 
-
                 <!-- Submit Button -->
 
-                <button type="submit" id="submitButton">
+                <button type="submit"
+                        id="submitButton">
 
                     Submit Enquiry
 
                 </button>
-
 
                 <!-- Form Response -->
 
                 <p id="formResponse"
                    role="status"
                    aria-live="polite">
+
                 </p>
 
             </form>
@@ -313,7 +346,6 @@
         </section>
 
     </main>
-
 
     <!-- Website Footer -->
 
@@ -328,209 +360,16 @@
         </p>
 
         <p>
+
             For any additional information, visit our
+
             <a href="contacts.html">
                 Contact Information page
             </a>.
+
         </p>
 
     </footer>
-
-
-    <!-- JavaScript Form Validation and Submission Simulation -->
-
-    <script>
-
-        // Form elements
-
-        const enquiryForm =
-            document.getElementById("enquiryForm");
-
-        const formResponse =
-            document.getElementById("formResponse");
-
-        const submitButton =
-            document.getElementById("submitButton");
-
-
-        // Preferred date element
-
-        const preferredDate =
-            document.getElementById("preferredDate");
-
-
-        // Set the minimum preferred date to today
-
-        const today = new Date();
-
-        const localDate =
-            today.getFullYear() + "-" +
-            String(today.getMonth() + 1).padStart(2, "0") + "-" +
-            String(today.getDate()).padStart(2, "0");
-
-        preferredDate.min = localDate;
-
-
-        // JavaScript Form Validation
-
-        enquiryForm.addEventListener("submit", function(event) {
-
-            // Prevent normal form submission
-
-            event.preventDefault();
-
-
-            // Clear previous messages
-
-            formResponse.textContent = "";
-            formResponse.style.color = "";
-
-
-            // Get form values
-
-            const fullName =
-                document.getElementById("fullName").value.trim();
-
-            const email =
-                document.getElementById("email").value.trim();
-
-            const phone =
-                document.getElementById("phone").value.trim();
-
-            const enquiryType =
-                document.getElementById("enquiryType").value;
-
-            const message =
-                document.getElementById("message").value.trim();
-
-
-            // Validate full name
-
-            if (fullName.length < 3 ||
-                fullName.length > 60 ||
-                !/^[A-Za-zÀ-ÿ '-]{3,60}$/.test(fullName)) {
-
-                formResponse.textContent =
-                    "Please enter a valid full name.";
-
-                formResponse.style.color = "red";
-
-                return;
-
-            }
-
-
-            // Validate email address
-
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
-                email.length > 100) {
-
-                formResponse.textContent =
-                    "Please enter a valid email address.";
-
-                formResponse.style.color = "red";
-
-                return;
-
-            }
-
-
-            // Validate phone number if provided
-
-            if (phone !== "" &&
-                !/^[+]?[0-9 ()-]{7,20}$/.test(phone)) {
-
-                formResponse.textContent =
-                    "Please enter a valid phone number.";
-
-                formResponse.style.color = "red";
-
-                return;
-
-            }
-
-
-            // Validate enquiry category
-
-            if (enquiryType === "") {
-
-                formResponse.textContent =
-                    "Please select an enquiry option.";
-
-                formResponse.style.color = "red";
-
-                return;
-
-            }
-
-
-            // Validate enquiry message
-
-            if (message.length < 10 || message.length > 1000) {
-
-                formResponse.textContent =
-                    "Your enquiry must contain between 10 and 1000 characters.";
-
-                formResponse.style.color = "red";
-
-                return;
-
-            }
-
-
-            // Validate preferred date
-
-            if (preferredDate.value &&
-                preferredDate.value < localDate) {
-
-                formResponse.textContent =
-                    "Please select today or a future date.";
-
-                formResponse.style.color = "red";
-
-                return;
-
-            }
-
-
-            // All client-side validation passed
-
-            submitButton.disabled = true;
-
-            submitButton.textContent = "Submitting...";
-
-
-            // Simulate successful enquiry submission
-
-            setTimeout(function() {
-
-
-                // Display successful submission message
-
-                formResponse.textContent =
-                    "Thank you! Your enquiry has been submitted successfully. Our team will contact you soon.";
-
-                formResponse.style.color = "green";
-
-
-                // Reset the form
-
-                enquiryForm.reset();
-
-
-                // Enable submit button again
-
-                submitButton.disabled = false;
-
-                submitButton.textContent = "Submit Enquiry";
-
-
-            }, 1000);
-
-
-        });
-
-    </script>
 
 </body>
 

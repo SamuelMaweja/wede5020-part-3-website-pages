@@ -6,7 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Basic SEO -->
+    <!-- Security Meta Tags -->
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   script-src 'self' 'unsafe-inline' https://unpkg.com;
+                   style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com;
+                   font-src 'self' https://fonts.gstatic.com;
+                   img-src 'self' data: https:;
+                   connect-src 'self' https://*.tile.openstreetmap.org;
+                   frame-ancestors 'none';
+                   base-uri 'self';
+                   form-action 'self';">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <meta http-equiv="Permissions-Policy"
+          content="camera=(), microphone=(), geolocation=()">
+
+    <!-- SEO -->
 
     <meta name="author" content="Mpiana Samuel Maweja">
 
@@ -18,14 +36,12 @@
 
     <meta name="robots" content="index, follow">
 
-
     <title>Contact VillaSerenita | Italian Restaurant Contact Information</title>
-
-    <!-- SEO Canonical URL -->
 
     <link rel="canonical"
           href="https://www.VillaSerenitaEAT.co.za/contacts.html">
 
+    <!-- Open Graph -->
 
     <meta property="og:type" content="website">
 
@@ -33,7 +49,7 @@
           content="Contact VillaSerenita Italian Restaurant">
 
     <meta property="og:description"
-          content="Get in touch with VillaSerenita for restaurant enquiries, reservations and assistance. Find our contact information and location.">
+          content="Get in touch with VillaSerenita for restaurant enquiries, reservations and assistance.">
 
     <meta property="og:url"
           content="https://www.VillaSerenitaEAT.co.za/contacts.html">
@@ -43,26 +59,27 @@
 
     <meta property="og:site_name" content="VillaSerenita">
 
-
     <!-- Leaflet CSS -->
 
     <link rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="">
 
     <!-- External CSS -->
 
     <link rel="stylesheet" href="styles.css">
 
-
     <!-- Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
           rel="stylesheet">
-
 
     <!-- Restaurant Structured Data -->
 
@@ -87,7 +104,6 @@
 
 <body>
 
-
     <!-- Website Header -->
 
     <header class="site-header">
@@ -96,23 +112,15 @@
             Contact VillaSerenita Italian Restaurant
         </h1>
 
-        <!-- Main Nav links -->
-
         <nav aria-label="Main navigation">
 
             <ul class="navigation-list">
 
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
+                <li><a href="index.html">Home</a></li>
 
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
+                <li><a href="about.html">About Us</a></li>
 
-                <li>
-                    <a href="enquiries.html">Help</a>
-                </li>
+                <li><a href="enquiries.html">Help</a></li>
 
                 <li>
                     <a href="contacts.html" aria-current="page">
@@ -120,16 +128,13 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="products.html">Courses</a>
-                </li>
+                <li><a href="products.html">Courses</a></li>
 
             </ul>
 
         </nav>
 
     </header>
-
 
     <!-- Main Contact Information -->
 
@@ -144,7 +149,6 @@
             menu, reservations or services? Contact VillaSerenita
             using the details below. We are happy to assist you.
         </p>
-
 
         <!-- Contact Details -->
 
@@ -178,8 +182,7 @@
 
         </section>
 
-
-        <!-- General Contact Message Form -->
+        <!-- Contact Message Form -->
 
         <section class="contact-form-section">
 
@@ -191,19 +194,13 @@
                 We would love to hear from you.
             </p>
 
-
-            <!-- Contact Message Form -->
-
             <form id="contactForm" method="POST">
-
 
                 <!-- Full Name -->
 
                 <div class="form-group">
 
-                    <label for="fullName">
-                        Full Name:
-                    </label>
+                    <label for="fullName">Full Name:</label>
 
                     <input
                         type="text"
@@ -213,19 +210,16 @@
                         minlength="3"
                         maxlength="60"
                         pattern="[A-Za-zÀ-ÿ '-]{3,60}"
-                        title="Enter a name containing 3 to 60 letters."
+                        autocomplete="name"
                         required>
 
                 </div>
-
 
                 <!-- Email Address -->
 
                 <div class="form-group">
 
-                    <label for="email">
-                        Email Address:
-                    </label>
+                    <label for="email">Email Address:</label>
 
                     <input
                         type="email"
@@ -233,10 +227,10 @@
                         name="email"
                         placeholder="example@email.com"
                         maxlength="100"
+                        autocomplete="email"
                         required>
 
                 </div>
-
 
                 <!-- Phone Number -->
 
@@ -252,18 +246,16 @@
                         name="phone"
                         placeholder="+27 64 734 8955"
                         pattern="[+]?[0-9 ()-]{7,20}"
-                        title="Enter a valid phone number containing 7 to 20 characters.">
+                        maxlength="20"
+                        autocomplete="tel">
 
                 </div>
 
-
-                <!-- Message Subject -->
+                <!-- Subject -->
 
                 <div class="form-group">
 
-                    <label for="subject">
-                        Subject:
-                    </label>
+                    <label for="subject">Subject:</label>
 
                     <input
                         type="text"
@@ -276,14 +268,11 @@
 
                 </div>
 
-
-                <!-- Full Message -->
+                <!-- Message -->
 
                 <div class="form-group">
 
-                    <label for="message">
-                        Your Message:
-                    </label>
+                    <label for="message">Your Message:</label>
 
                     <textarea
                         id="message"
@@ -296,15 +285,11 @@
 
                 </div>
 
-
                 <!-- Submit Button -->
 
                 <button type="submit" id="submitButton">
-
                     Send Message
-
                 </button>
-
 
                 <!-- Form Response -->
 
@@ -317,8 +302,7 @@
 
         </section>
 
-
-        <!-- Interactive Restaurant Location Map -->
+        <!-- Restaurant Location Map -->
 
         <section class="location-section">
 
@@ -338,7 +322,6 @@
         </section>
 
     </main>
-
 
     <!-- Website Footer -->
 
@@ -379,23 +362,22 @@
 
     </footer>
 
-
     <!-- Leaflet JavaScript -->
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
             defer></script>
-
 
     <!-- Restaurant Map JavaScript -->
 
     <script src="js/map.js" defer></script>
 
-
-    <!-- JavaScript Form Validation and Simulated Submission -->
+    <!-- Secure Client-Side Form Validation -->
 
     <script>
 
-        // Form elements
+        "use strict";
 
         const contactForm =
             document.getElementById("contactForm");
@@ -406,23 +388,12 @@
         const submitButton =
             document.getElementById("submitButton");
 
-
-        // JavaScript Form Validation
-
         contactForm.addEventListener("submit", function(event) {
-
-            // Prevent normal form submission
 
             event.preventDefault();
 
-
-            // Clear previous messages
-
             formResponse.textContent = "";
             formResponse.style.color = "";
-
-
-            // Get form values
 
             const fullName =
                 document.getElementById("fullName").value.trim();
@@ -439,11 +410,9 @@
             const message =
                 document.getElementById("message").value.trim();
 
-
             // Validate full name
 
-            if (fullName.length < 3 || fullName.length > 60 ||
-                !/^[A-Za-zÀ-ÿ '-]{3,60}$/.test(fullName)) {
+            if (!/^[A-Za-zÀ-ÿ '-]{3,60}$/.test(fullName)) {
 
                 formResponse.textContent =
                     "Please enter a valid full name.";
@@ -454,11 +423,10 @@
 
             }
 
-
             // Validate email address
 
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
-                email.length > 100) {
+            if (email.length > 100 ||
+                !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
 
                 formResponse.textContent =
                     "Please enter a valid email address.";
@@ -469,8 +437,7 @@
 
             }
 
-
-            // Validate phone number if provided
+            // Validate phone number
 
             if (phone !== "" &&
                 !/^[+]?[0-9 ()-]{7,20}$/.test(phone)) {
@@ -484,13 +451,12 @@
 
             }
 
-
-            // Validate message subject
+            // Validate subject
 
             if (subject.length < 3 || subject.length > 100) {
 
                 formResponse.textContent =
-                    "Please enter a subject between 3 and 100 characters.";
+                    "Please enter a valid subject.";
 
                 formResponse.style.color = "red";
 
@@ -498,8 +464,7 @@
 
             }
 
-
-            // Validate full message
+            // Validate message
 
             if (message.length < 10 || message.length > 5000) {
 
@@ -512,38 +477,26 @@
 
             }
 
-
-            // All client-side validation passed
+            // Prevent repeated submissions
 
             submitButton.disabled = true;
 
             submitButton.textContent = "Sending Message...";
 
-
-        
+            // Demonstration only: no email is actually sent
 
             setTimeout(function() {
 
-
-                // Display success message
-
                 formResponse.textContent =
-                    "Thank you! Your message has been successfully submitted. This is a demonstration and no actual email has been sent.";
+                    "Thank you! Your message has been validated. This is a demonstration and no actual email has been sent.";
 
                 formResponse.style.color = "green";
 
-
-                // Reset the form
-
                 contactForm.reset();
-
-
-                // Enable submit button again
 
                 submitButton.disabled = false;
 
                 submitButton.textContent = "Send Message";
-
 
             }, 1000);
 

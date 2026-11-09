@@ -4,10 +4,30 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <meta name="author" content="Mpiana Samuel Maweja">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Security Information -->
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   script-src 'self';
+                   style-src 'self' https://fonts.googleapis.com;
+                   font-src 'self' https://fonts.gstatic.com;
+                   img-src 'self' data:;
+                   object-src 'none';
+                   base-uri 'self';
+                   form-action 'self';
+                   upgrade-insecure-requests;">
+
+    <meta name="referrer"
+          content="strict-origin-when-cross-origin">
+
+    <!-- Basic SEO -->
+
+    <meta name="author"
+          content="Mpiana Samuel Maweja">
 
     <meta name="description"
           content="Explore the VillaSerenita Italian restaurant menu. Discover our selection of delicious Italian dishes, menu courses and dining options.">
@@ -15,17 +35,22 @@
     <meta name="keywords"
           content="VillaSerenita menu, Italian restaurant menu, Italian food, Italian dishes, restaurant courses, food menu, dining">
 
-    <meta name="robots" content="index, follow">
+    <meta name="robots"
+          content="index, follow">
 
-    
+    <!-- SEO Title -->
+
     <title>VillaSerenita Menu | Explore Our Italian Dishes</title>
 
-    <!-- SEO Canonical URL -->
+    <!-- Canonical URL -->
+
     <link rel="canonical"
           href="https://www.VillaSerenitaEAT.co.za/products.html">
 
-    
-    <meta property="og:type" content="website">
+    <!-- Open Graph SEO -->
+
+    <meta property="og:type"
+          content="website">
 
     <meta property="og:title"
           content="VillaSerenita | Explore Our Italian Menu">
@@ -37,77 +62,99 @@
           content="https://www.VillaSerenitaEAT.co.za/products.html">
 
     <meta property="og:image"
-          content="https://www.VillaSerenitaEAT.co.za/Restaurant.jpg">
+          content="https://www.VillaSerenitaEAT.co.za/assets/images/Restaurant.jpg">
 
-    <meta property="og:site_name" content="VillaSerenita">
+    <meta property="og:site_name"
+          content="VillaSerenita">
 
-  
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet"
+          href="css/styles.css">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
           rel="stylesheet">
 
-    <!-- Restaurant and Menu Information structure -->
+    <!-- Restaurant and Menu Structured Data -->
+
     <script type="application/ld+json">
+
     {
         "@context": "https://schema.org",
         "@type": "Restaurant",
         "name": "VillaSerenita",
         "servesCuisine": "Italian",
         "description": "Explore the VillaSerenita Italian restaurant menu and discover our dining options.",
-        "url": "www.VillaSerenitaEAT.co.za/products.html",
+        "url": "https://www.VillaSerenitaEAT.co.za/products.html",
         "telephone": "+27647348955",
+        "image": "https://www.VillaSerenitaEAT.co.za/assets/images/Restaurant.jpg",
         "hasMenu": {
             "@type": "Menu",
             "name": "VillaSerenita Italian Restaurant Menu",
-            "url": "www.VillaSerenitaEAT.co.za/products.html"
+            "url": "https://www.VillaSerenitaEAT.co.za/products.html"
         },
         "sameAs": [
             "https://instagram.com/VillaSerenita",
             "https://tiktok.com/@VillaSerenita"
         ]
     }
+
     </script>
 
 </head>
 
 <body>
 
-   
-    <header>
+    <!-- Website Header -->
+
+    <header class="site-header">
 
         <h1 class="page-title">
             VillaSerenita Italian Restaurant Menu
         </h1>
 
-        <!-- Main Nav links -->
+        <!-- Main Navigation -->
+
         <nav aria-label="Main navigation">
 
-            <ul>
+            <ul class="navigation-list">
 
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="about.html">About Us</a>
+                    <a href="about.html">
+                        About Us
+                    </a>
                 </li>
 
                 <li>
-                    <a href="enquiries.html">Help</a>
+                    <a href="enquiries.html">
+                        Help
+                    </a>
                 </li>
 
                 <li>
-                    <a href="contacts.html">Contact Information</a>
+                    <a href="contacts.html">
+                        Contact Information
+                    </a>
                 </li>
 
                 <li>
-                    <a href="products.html" aria-current="page">
+                    <a href="products.html"
+                       aria-current="page">
                         Courses
                     </a>
                 </li>
@@ -119,39 +166,60 @@
     </header>
 
     <!-- Main Menu Content -->
+
     <main class="products-container">
 
         <!-- Menu Introduction and Search -->
+
         <section class="product-controls">
 
             <h2>Explore Our Italian Menu</h2>
 
             <p>
+
                 Discover the VillaSerenita menu and explore our
                 selection of Italian dishes and dining options.
                 Find your preferred menu items using the search
                 and sorting features below.
+
             </p>
 
+            <!-- Restaurant Image -->
+
+            <img src="assets/images/Restaurant.jpg"
+                 alt="VillaSerenita Italian restaurant dining area"
+                 class="products-image"
+                 loading="lazy">
+
             <!-- Search Bar -->
+
             <label for="search-input">
+
                 Search for an Italian dish
+
             </label>
 
             <input
                 type="search"
                 id="search-input"
+                name="search"
                 placeholder="Search for a dish..."
                 aria-label="Search Italian menu products"
-            >
+                maxlength="100"
+                autocomplete="off">
 
             <!-- Sorting Options -->
+
             <label for="sort-products">
+
                 Sort menu items
+
             </label>
 
-            <select id="sort-products"
-                    aria-label="Sort menu products">
+            <select
+                id="sort-products"
+                name="sort"
+                aria-label="Sort menu products">
 
                 <option value="default">
                     Default Menu Order
@@ -173,18 +241,21 @@
 
         </section>
 
-        <!-- Menu Products -->
+        <!-- Available Menu Products -->
+
         <section aria-label="Available menu items">
 
             <h2>Our Available Menu Items</h2>
 
-            <div id="product-list">
+            <div id="product-list"
+                 aria-live="polite">
 
                 <!-- JavaScript displays menu products here -->
 
             </div>
 
             <!-- No Search Results Message -->
+
             <p id="no-results" hidden>
 
                 Sorry, no menu items match your search.
@@ -196,8 +267,37 @@
 
     </main>
 
-    <!-- JavaScript Product Listings, Searching and Sorting -->
-    <script src="js/products.js" defer></script>
+    <!-- Website Footer -->
+
+    <footer class="site-footer">
+
+        <p class="footer-text">
+
+            VillaSerenita - Italian Restaurant
+
+        </p>
+
+        <p>
+
+            Quality service and customer satisfaction.
+
+        </p>
+
+        <p>
+
+            For enquiries, visit our
+            <a href="contacts.html">
+                Contact Information page
+            </a>.
+
+        </p>
+
+    </footer>
+
+    <!-- External Product JavaScript -->
+
+    <script src="js/products.js"
+            defer></script>
 
 </body>
 

@@ -2,11 +2,36 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Security Settings -->
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   script-src 'self';
+                   style-src 'self' https://fonts.googleapis.com;
+                   font-src 'self' https://fonts.gstatic.com;
+                   img-src 'self' data:;
+                   object-src 'none';
+                   base-uri 'self';
+                   form-action 'self';
+                   frame-ancestors 'none';
+                   upgrade-insecure-requests;">
+
+    <meta name="referrer"
+          content="strict-origin-when-cross-origin">
+
+    <meta http-equiv="X-Content-Type-Options"
+          content="nosniff">
 
     <!-- Standard SEO -->
-    <meta name="author" content="Mpiana Samuel Maweja">
+
+    <meta name="author"
+          content="Mpiana Samuel Maweja">
 
     <meta name="description"
           content="Welcome to VillaSerenita, an Italian restaurant offering quality service, delicious Italian cuisine, restaurant courses and a welcoming dining experience. Contact us for enquiries and reservations.">
@@ -14,39 +39,59 @@
     <meta name="keywords"
           content="VillaSerenita, Italian restaurant, Italian food, restaurant, dining, food courses, restaurant reservations, quality service">
 
-    <meta name="robots" content="index, follow">
+    <meta name="robots"
+          content="index, follow">
 
     <!-- SEO Title -->
+
     <title>VillaSerenita | Italian Restaurant & Dining Experience</title>
 
     <!-- SEO Canonical URL -->
-    <link rel="canonical" href="https://www.VillaSerenitaEAT.co.za/">
 
-    <!-- Open Graph SEO (Social Media Sharing) -->
-    <meta property="og:type" content="website">
+    <link rel="canonical"
+          href="https://www.VillaSerenitaEAT.co.za/">
+
+    <!-- Open Graph SEO -->
+
+    <meta property="og:type"
+          content="website">
+
     <meta property="og:title"
           content="VillaSerenita | Italian Restaurant">
+
     <meta property="og:description"
           content="Discover VillaSerenita, an Italian restaurant dedicated to quality service and a welcoming dining experience.">
+
     <meta property="og:image"
           content="https://www.VillaSerenitaEAT.co.za/Restaurant.jpg">
+
     <meta property="og:url"
           content="https://www.VillaSerenitaEAT.co.za/">
-    <meta property="og:site_name" content="VillaSerenita">
 
-   
+    <meta property="og:site_name"
+          content="VillaSerenita">
+
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet"
+          href="styles.css">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
           rel="stylesheet">
 
-    <!-- Restaurant information structure -->
+    <!-- Restaurant Structured Data -->
+
     <script type="application/ld+json">
+
     {
         "@context": "https://schema.org",
         "@type": "Restaurant",
@@ -62,62 +107,84 @@
             "https://tiktok.com/@VillaSerenita"
         ]
     }
+
     </script>
 
 </head>
 
 <body>
 
+    <!-- Website Header -->
+
     <header class="site-header">
 
-        <!-- Responsive logo -->
+        <!-- Responsive Logo -->
+
         <picture class="logo-picture">
+
             <source media="(max-width: 40em)"
-                    srcset="logo.jpg">
+                    srcset="Logo.jpg">
 
             <source media="(max-width: 60em)"
-                    srcset="logo.jpg">
+                    srcset="Logo.jpg">
 
-            <img src="logo.jpg"
-                 srcset="logo.jpg 350w,
-                         logo.jpg 700w,
-                         logo.jpg 1050w"
+            <img src="Logo.jpg"
+                 srcset="Logo.jpg 350w,
+                         Logo.jpg 700w,
+                         Logo.jpg 1050w"
                  sizes="(max-width: 40em) 70vw,
                         (max-width: 60em) 50vw,
                         45vw"
                  width="350"
                  height="300"
-                 alt="VillaSerenita Italian restaurant logo">
+                 alt="VillaSerenita Italian restaurant logo"
+                 fetchpriority="high">
+
         </picture>
 
-        <!-- Main navigation -->
+        <!-- Main Navigation -->
+
         <nav aria-label="Main navigation">
+
             <ul class="navigation-list">
 
                 <li>
-                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="index.html"
+                       aria-current="page">
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="about.html">About Us</a>
+                    <a href="about.html">
+                        About Us
+                    </a>
                 </li>
 
                 <li>
-                    <a href="enquiries.html">Help</a>
+                    <a href="enquiries.html">
+                        Help
+                    </a>
                 </li>
 
                 <li>
-                    <a href="contacts.html">Contact Information</a>
+                    <a href="contacts.html">
+                        Contact Information
+                    </a>
                 </li>
 
                 <li>
-                    <a href="products.html">Courses</a>
+                    <a href="products.html">
+                        Courses
+                    </a>
                 </li>
 
             </ul>
+
         </nav>
 
-        <!-- Restaurant image settings -->
+        <!-- Restaurant Image -->
+
         <picture class="restaurant-picture">
 
             <source media="(max-width: 40em)"
@@ -135,44 +202,56 @@
                         80vw"
                  width="800"
                  height="600"
-                 alt="VillaSerenita Italian restaurant interior and dining area">
+                 alt="VillaSerenita Italian restaurant interior and dining area"
+                 fetchpriority="high">
+
         </picture>
 
     </header>
 
-    <!-- Main content information brief description of company values -->
+    <!-- Main Website Content -->
+
     <main class="home-main">
 
         <h1>Welcome to VillaSerenita Italian Restaurant</h1>
 
         <p>
+
             VillaSerenita strives to bring quality service every time.
             Discover our Italian restaurant and enjoy a welcoming
             dining experience with a commitment to quality and customer
             satisfaction.
+
         </p>
 
     </main>
 
-    <!-- Footer information -->
+    <!-- Website Footer -->
+
     <footer class="site-footer">
 
         <section class="footer-section">
 
-            <h2 class="footer-heading">Contact Information</h2>
+            <h2 class="footer-heading">
+                Contact Information
+            </h2>
 
             <ul class="footer-list">
 
                 <li>
+
                     <a href="tel:+27647348955">
                         +27 64 734 8955
                     </a>
+
                 </li>
 
                 <li>
+
                     <a href="mailto:VillaSerenitaEat@gmail.com">
                         VillaSerenitaEat@gmail.com
                     </a>
+
                 </li>
 
             </ul>
@@ -181,24 +260,30 @@
 
         <section class="footer-section">
 
-            <h2 class="footer-heading">Follow Us</h2>
+            <h2 class="footer-heading">
+                Follow Us
+            </h2>
 
             <ul class="footer-list">
 
                 <li>
+
                     <a href="https://instagram.com/VillaSerenita"
                        target="_blank"
                        rel="noopener noreferrer">
                         Instagram
                     </a>
+
                 </li>
 
                 <li>
+
                     <a href="https://tiktok.com/@VillaSerenita"
                        target="_blank"
                        rel="noopener noreferrer">
                         TikTok
                     </a>
+
                 </li>
 
             </ul>
@@ -208,4 +293,5 @@
     </footer>
 
 </body>
+
 </html>
