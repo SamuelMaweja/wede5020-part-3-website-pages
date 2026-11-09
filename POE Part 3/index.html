@@ -5,19 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Standard SEO -->
     <meta name="author" content="Mpiana Samuel Maweja">
-    <meta name="description" content="Welcome to VillaSerenita, an Italian restaurant.">
-    <meta name="keywords" content="reservations, delivery, events">
 
-    <title>VillaSerenita</title>
-     <!-- External CSS stylesheet -->
+    <meta name="description"
+          content="Welcome to VillaSerenita, an Italian restaurant offering quality service, delicious Italian cuisine, restaurant courses and a welcoming dining experience. Contact us for enquiries and reservations.">
+
+    <meta name="keywords"
+          content="VillaSerenita, Italian restaurant, Italian food, restaurant, dining, food courses, restaurant reservations, quality service">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Title -->
+    <title>VillaSerenita | Italian Restaurant & Dining Experience</title>
+
+    <!-- SEO Canonical URL -->
+    <link rel="canonical" href="https://www.VillaSerenitaEAT.co.za/">
+
+    <!-- Open Graph SEO (Social Media Sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+          content="VillaSerenita | Italian Restaurant">
+    <meta property="og:description"
+          content="Discover VillaSerenita, an Italian restaurant dedicated to quality service and a welcoming dining experience.">
+    <meta property="og:image"
+          content="https://www.VillaSerenitaEAT/Restaurant.jpg">
+    <meta property="og:url"
+          content="https://www.VillaSerenitaEAT.co.za/">
+    <meta property="og:site_name" content="VillaSerenita">
+
+   
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
           rel="stylesheet">
+
+    <!-- Restaurant information structure -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "VillaSerenita",
+        "description": "An Italian restaurant committed to providing quality service and a welcoming dining experience.",
+        "image": "https://www.yourdomain.co.za/Restaurant.jpg",
+        "telephone": "+27647348955",
+        "email": "VillaSerenitaEat@gmail.com",
+        "servesCuisine": "Italian",
+        "url": "https://www.yourdomain.co.za/",
+        "sameAs": [
+            "https://instagram.com/VillaSerenita",
+            "https://tiktok.com/@VillaSerenita"
+        ]
+    }
+    </script>
+
 </head>
 
 <body>
@@ -26,29 +72,25 @@
 
         <!-- Responsive logo -->
         <picture class="logo-picture">
+            <source media="(max-width: 40em)"
+                    srcset="logo.jpg">
 
-            <source
-                media="(max-width: 40em)"
-                srcset="logo.jpg">
+            <source media="(max-width: 60em)"
+                    srcset="logo.jpg">
 
-            <source
-                media="(max-width: 60em)"
-                srcset="logo.jpg">
-
-            <img
-                src="logo.jpg"
-                srcset="logo.jpg 350w,
-                        logo.jpg 700w,
-                        logo.jpg 1050w"
-                sizes="(max-width: 40em) 70vw,
-                       (max-width: 60em) 50vw,
-                       45vw"
-                width="350"
-                height="300"
-                alt="VillaSerenita restaurant logo">
+            <img src="logo.jpg"
+                 srcset="logo.jpg 350w,
+                         logo.jpg 700w,
+                         logo.jpg 1050w"
+                 sizes="(max-width: 40em) 70vw,
+                        (max-width: 60em) 50vw,
+                        45vw"
+                 width="350"
+                 height="300"
+                 alt="VillaSerenita Italian restaurant logo">
         </picture>
 
-        <!-- Nav links -->
+        <!-- Main navigation -->
         <nav aria-label="Main navigation">
             <ul class="navigation-list">
 
@@ -75,43 +117,46 @@
             </ul>
         </nav>
 
-        <!-- Responsive restaurant image -->
+        <!-- Restaurant image settings -->
         <picture class="restaurant-picture">
 
-            <source
-                media="(max-width: 40em)"
-                srcset="Restaurant.jpg">
+            <source media="(max-width: 40em)"
+                    srcset="Restaurant.jpg">
 
-            <source
-                media="(max-width: 60em)"
-                srcset="Restaurant.jpg">
+            <source media="(max-width: 60em)"
+                    srcset="Restaurant.jpg">
 
-            <img
-                src="Restaurant.jpg"
-                srcset="Restaurant.jpg 600w,
-                        Restaurant.jpg 900w,
-                        Restaurant.jpg 1200w"
-                sizes="(max-width: 40em) 100vw,
-                       (max-width: 60em) 90vw,
-                       80vw"
-                width="800"
-                height="600"
-                alt="Interior of VillaSerenita restaurant">
+            <img src="Restaurant.jpg"
+                 srcset="Restaurant.jpg 600w,
+                         Restaurant.jpg 900w,
+                         Restaurant.jpg 1200w"
+                 sizes="(max-width: 40em) 100vw,
+                        (max-width: 60em) 90vw,
+                        80vw"
+                 width="800"
+                 height="600"
+                 alt="VillaSerenita Italian restaurant interior and dining area">
         </picture>
 
     </header>
 
-    
+    <!-- Main content information brief description of company values -->
     <main class="home-main">
-        VillaSerenita strives to bring quality service everytime
-       
+
+        <h1>Welcome to VillaSerenita Italian Restaurant</h1>
+
+        <p>
+            VillaSerenita strives to bring quality service every time.
+            Discover our Italian restaurant and enjoy a welcoming
+            dining experience with a commitment to quality and customer
+            satisfaction.
+        </p>
 
     </main>
 
-    
+    <!-- Footer information -->
     <footer class="site-footer">
 
-        <!-- Contact information -->
         <section class="footer-section">
 
             <h2 class="footer-heading">Contact Information</h2>
@@ -134,7 +179,6 @@
 
         </section>
 
-        <!-- Social media information -->
         <section class="footer-section">
 
             <h2 class="footer-heading">Follow Us</h2>
