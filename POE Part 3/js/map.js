@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Add marker
     L.marker([-26.2041, 28.0473])
         .addTo(map)
         .bindPopup('Welcome to VillaSerenita!')
