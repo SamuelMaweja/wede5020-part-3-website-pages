@@ -1,87 +1,197 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Basic SEO -->
     <meta name="author" content="Mpiana Samuel Maweja">
-    <meta name="description" content="Contact VillaSerenita for enquiries and assistance.">
-    <meta name="keywords" content="reservations, delivery, events">
 
-    <title>Contact Us</title>
+    <meta name="description"
+          content="Contact VillaSerenita Italian Restaurant for enquiries, reservations and assistance. Find our contact details, email address, telephone number and restaurant location.">
+
+    <meta name="keywords"
+          content="VillaSerenita contact, Italian restaurant contact, restaurant enquiries, restaurant reservations, restaurant location, contact information">
+
+    <meta name="robots" content="index, follow">
 
     
+    <title>Contact VillaSerenita | Italian Restaurant Contact Information</title>
+
+    <!--  SEO Canonical URL -->
+    <link rel="canonical"
+          href="https://www.VillaSerenitaEAT.co.za/contacts.html">
+
+  
+    <meta property="og:type" content="website">
+
+    <meta property="og:title"
+          content="Contact VillaSerenita Italian Restaurant">
+
+    <meta property="og:description"
+          content="Get in touch with VillaSerenita for restaurant enquiries, reservations and assistance. Find our contact information and location.">
+
+    <meta property="og:url"
+          content="https://www.VillaSerenitaEAT.co.za/contacts.html">
+
+    <meta property="og:image"
+          content="https://www.VillaSerenitaEAT.co.za/Restaurant.jpg">
+
+    <meta property="og:site_name" content="VillaSerenita">
+
+   
+
+    <!-- Leaflet CSS -->
     <link rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-   
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
           rel="stylesheet">
 
+    <!-- Restaurant Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "VillaSerenita",
+        "description": "VillaSerenita is an Italian restaurant offering quality service and a welcoming dining experience.",
+        "url": "https://www.VillaSerenitaEAT.co.za/",
+        "telephone": "+27647348955",
+        "email": "VillaSerenitaEat@gmail.com",
+        "servesCuisine": "Italian",
+        "sameAs": [
+            "https://instagram.com/VillaSerenita",
+            "https://tiktok.com/@VillaSerenita"
+        ]
+    }
+    </script>
+
 </head>
 
 <body>
 
+    
     <header class="site-header">
 
-        <h1 class="page-title">Founded in 2015</h1>
+        <h1 class="page-title">
+            Contact VillaSerenita Italian Restaurant
+        </h1>
 
+        <!-- Main Navi links -->
         <nav aria-label="Main navigation">
+
             <ul class="navigation-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="enquiries.html" aria-current="page">Help</a></li>
-                <li><a href="contacts.html">Contact Information</a></li>
-                <li><a href="products.html">Courses</a></li>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="enquiries.html">Help</a>
+                </li>
+
+                <li>
+                    <a href="contacts.html" aria-current="page">
+                        Contact Information
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">Courses</a>
+                </li>
+
             </ul>
+
         </nav>
 
     </header>
 
+    <!-- Main Contact Information -->
     <main class="contact-main">
 
-        <h2 class="section-title">Get in Touch</h2>
+        <h2 class="section-title">
+            Get in Touch with VillaSerenita
+        </h2>
 
-        <ul class="contact-list">
+        <p>
+            Do you have questions about our Italian restaurant,
+            menu, reservations or services? Contact VillaSerenita
+            using the details below. We are happy to assist you.
+        </p>
 
-            <li class="contact-item">
-                <a href="tel:+27647348955">
-                    +27 64 734 8955
-                </a>
-            </li>
+        <!-- Contact Details -->
+        <section aria-label="Restaurant contact details">
 
-            <li class="contact-item">
-                <a href="mailto:VillaSerenitaEat@gmail.com">
-                    VillaSerenitaEat@gmail.com
-                </a>
-            </li>
+            <h2>Our Contact Information</h2>
 
-        </ul>
+            <ul class="contact-list">
 
-        <!-- Interactive Map -->
+                <li class="contact-item">
+
+                    <strong>Telephone:</strong>
+
+                    <a href="tel:+27647348955">
+                        +27 64 734 8955
+                    </a>
+
+                </li>
+
+                <li class="contact-item">
+
+                    <strong>Email:</strong>
+
+                    <a href="mailto:VillaSerenitaEat@gmail.com">
+                        VillaSerenitaEat@gmail.com
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- Interactive Restaurant Location Map -->
         <section class="location-section">
 
-            <h2>Find Us</h2>
+            <h2>Find VillaSerenita</h2>
 
-            <p>Visit VillaSerenita using our interactive map.</p>
+            <p>
+                Use our interactive map to explore the location
+                of VillaSerenita Italian Restaurant and plan
+                your visit.
+            </p>
 
-            <div id="map"></div>
+            <div id="map"
+                 role="region"
+                 aria-label="Interactive map showing the location of VillaSerenita Italian Restaurant">
+            </div>
 
         </section>
 
     </main>
 
+  
     <footer class="site-footer">
 
         <section class="social-section">
 
-            <h2 class="footer-title">Follow Us</h2>
+            <h2 class="footer-title">
+                Follow VillaSerenita
+            </h2>
 
             <ul class="social-list">
 
@@ -105,12 +215,19 @@
 
         </section>
 
+        <p>
+            VillaSerenita - Italian Restaurant.
+            Quality service and customer satisfaction.
+        </p>
+
     </footer>
 
     <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            defer></script>
 
-    
-  <script src="js/map.js"></script>
+    <!-- Restaurant Map JavaScript -->
+    <script src="js/map.js" defer></script>
+
 </body>
 </html>
