@@ -385,281 +385,449 @@ a:focus-visible {
     }
 }
 
-        /*About.html CSS*/
-
-        header > h1,
-        header > h2,
-        header > img,
-        header > p,
-        header > p2,
-        header > li {
-            max-width: 1100px;
-        }
-
-         header img {
-            width: 350px;
-            height: 300px;
-            object-fit: cover;
-            margin: 20px 30px 20px 0;
-            border-radius: 10px;
-            border: 3px solid gold;
-        }
-
-         h1 {
-            color: gold;
-            font-size: 32px;
-            margin-top: 40px;
-            text-align: center;
-        }
-
-          h2 {
-            color: white;
-            font-size: 22px;
-            text-align: center;
-        }
-          p,
-        p2,
-        p3,
-        p4 {
-            color: white;
-            font-size: 18px;
-            line-height: 1.7;
-            margin: 15px 0;
-        }
-
-         li {
-            color: white;
-            line-height: 1.7;
-        }
-         main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-            text-align: center;
-        }
-
-        main b {
-            color: gold;
-            font-size: 28px;
-        }
-
         
-        footer {
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid gold;
-            color: white;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        
-         /* About.html Responsive design */
-        @media (max-width: 60em) {
+/* Page styling for About Us page*/
 
-            header {
-                padding: 1.5rem;
-            }
+* {
+    box-sizing: border-box;
+}
 
-            header > h1,
-            header > h2,
-            header > p,
-            header > p2,
-            header > li {
-                width: 90%;
-            }
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
 
-            picture img {
-                width: 50%;
-            }
+    display: flex;
+    flex-direction: column;
 
-            header img {
-                width: 50%;
-                margin-right: 0;
-            }
+    min-height: 100vh;
+    width: 100%;
+}
 
-            h1 {
-                font-size: 1.8rem;
-            }
 
-            h2 {
-                font-size: 1.25rem;
-            }
 
-            p,
-            p2,
-            p3,
-            p4 {
-                font-size: 1.05rem;
-            }
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-            nav ul {
-                gap: 1em;
-            }
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
 
-            nav a {
-                font-size: 1rem;
-            }
+.page-title {
+    color: gold;
+    font-size: 2rem;
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
 
-            main {
-                padding: 2rem;
-            }
 
-            footer {
-                padding: 1.5rem;
-            }
-        }
 
-        
-        @media (max-width: 40em) {
+nav {
+    display: flex;
+    justify-content: center;
 
-            header {
-                padding: 1rem;
-            }
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
 
-            header > h1,
-            header > h2,
-            header > p,
-            header > p2,
-            header > li {
-                width: 95%;
-            }
+.navigation-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-            picture {
-                width: 100%;
-            }
+    gap: 1.5rem;
 
-            picture img {
-                width: 80%;
-                max-width: 350px;
-            }
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
 
-            header img {
-                width: 80%;
-                height: auto;
-                margin: 1rem auto;
-            }
+nav a {
+    display: block;
 
-            h1 {
-                font-size: 1.6rem;
-                margin-top: 2rem;
-            }
+    color: gold;
+    text-decoration: none;
 
-            h2 {
-                font-size: 1.15rem;
-            }
+    font-size: 1.125rem;
+    font-weight: 500;
 
-            p,
-            p2,
-            p3,
-            p4 {
-                width: 95%;
-                font-size: 1rem;
-                line-height: 1.6;
-            }
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
 
-            nav {
-                margin-top: 1.5rem;
-            }
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
 
-            nav ul {
-                flex-direction: column;
-                gap: 0.5em;
-            }
+/* Navigation hover */
 
-            nav a {
-                display: block;
-                font-size: 1rem;
-                padding: 0.6em 1em;
-            }
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
 
-            main {
-                padding: 1.5rem;
-            }
+/* Navigation keyboard focus */
 
-            main b {
-                font-size: 1.5rem;
-            }
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+    background-color: blue;
+    color: white;
+}
 
-            footer {
-                padding: 1.25rem;
-                font-size: 0.95rem;
-            }
-        }
+/* Navigation active */
 
-        <picture>
-            <source
-                media="(max-width: 40em)"
-                srcset="Luca.jpg"
-                sizes="80vw">
+nav a:active {
+    transform: scale(0.95);
+}
 
-            <source
-                media="(max-width: 60em)"
-                srcset="Luca.jpg"
-                sizes="50vw">
+/* Current page */
 
-            <img
-                src="Luca.jpg"
-                srcset="Luca.jpg 350w,
-                        Luca.jpg 700w,
-                        Luca.jpg 1050w"
-                sizes="(max-width: 40em) 80vw,
-                       (max-width: 60em) 50vw,
-                       35vw"
-                width="350"
-                height="300"
-                alt="image of owner">
-        </picture>
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
 
-        <picture>
-            <source
-                media="(max-width: 40em)"
-                srcset="Bowen .jpg"
-                sizes="80vw">
+/* Main About page section */
 
-            <source
-                media="(max-width: 60em)"
-                srcset="Bowen .jpg"
-                sizes="50vw">
+.about-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-            <img
-                src="Bowen .jpg"
-                srcset="Bowen .jpg 350w,
-                        Bowen .jpg 700w,
-                        Bowen .jpg 1050w"
-                sizes="(max-width: 40em) 80vw,
-                       (max-width: 60em) 50vw,
-                       35vw"
-                width="350"
-                height="300"
-                alt="image of Sous chef">
-        </picture>
+    width: 100%;
+    padding: 1rem 2rem 2.5rem;
 
-         <picture>
-            <source
-                media="(max-width: 40em)"
-                srcset="Franklin.jpg"
-                sizes="80vw">
+    gap: 2.5rem;
+}
 
-            <source
-                media="(max-width: 60em)"
-                srcset="Franklin.jpg"
-                sizes="50vw">
+/* Staff cards */
 
-            <img
-                src="Franklin.jpg"
-                srcset="Franklin.jpg 350w,
-                        Franklin.jpg 700w,
-                        Franklin.jpg 1050w"
-                sizes="(max-width: 40em) 80vw,
-                       (max-width: 60em) 50vw,
-                       35vw"
-                width="350"
-                height="300"
-                alt="image of General Manager">
-        </picture>
+.staff-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+    max-width: 68.75rem;
+
+    padding: 1.5rem;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.6rem;
+
+    text-align: center;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Staff card hover */
+
+.staff-card:hover {
+    border-color: white;
+    box-shadow: 0 0 1rem gold;
+    transform: translateY(-0.25rem);
+}
+
+/* Keyboard focus within staff card */
+
+.staff-card:focus-within {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.25rem;
+}
+
+/* Staff headings */
+
+.staff-name {
+    color: gold;
+    font-size: 2rem;
+
+    margin: 1rem 0 0.5rem;
+    text-align: center;
+}
+
+.staff-age {
+    color: white;
+    font-size: 1.375rem;
+
+    margin: 0.5rem 0 1rem;
+    text-align: center;
+}
+
+/* Staff images */
+
+.staff-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 1.25rem 0;
+}
+
+.staff-picture img {
+    display: block;
+
+    width: 35%;
+    max-width: 350px;
+    max-height: 300px;
+
+    height: auto;
+    aspect-ratio: 7 / 6;
+
+    object-fit: cover;
+
+    border-radius: 0.6rem;
+    border: 0.2rem solid gold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Staff image hover */
+
+.staff-picture img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 1rem gold;
+}
+
+/* Staff's descriptions */
+
+.staff-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 68.75rem;
+}
+
+.staff-bio {
+    color: white;
+
+    font-size: 1.125rem;
+    line-height: 1.7;
+
+    margin: 0.9rem 0;
+
+    width: 90%;
+    max-width: 68.75rem;
+
+    text-align: center;
+}
+
+/* Slogan */
+
+.about-slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.about-slogan p {
+    color: gold;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.875rem;
+
+    border-top: 0.0625rem solid gold;
+
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    width: 100%;
+    text-align: center;
+}
+
+.footer-description {
+    width: 90%;
+    max-width: 68.75rem;
+    margin: 0;
+}
+
+/* Tablet responsive design */
+
+@media (max-width: 60em) {
+
+    .site-header {
+        padding: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .staff-card {
+        width: 95%;
+        padding: 1.25rem;
+    }
+
+    .staff-picture img {
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .staff-name {
+        font-size: 1.8rem;
+    }
+
+    .staff-age {
+        font-size: 1.25rem;
+    }
+
+    .staff-bio {
+        font-size: 1.05rem;
+    }
+
+    .navigation-list {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .about-main {
+        padding: 1rem 1.5rem 2rem;
+        gap: 2rem;
+    }
+
+    .site-footer {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 40em) {
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav {
+        margin-bottom: 1.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+
+    .about-main {
+        padding: 0.5rem 0.75rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .staff-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .staff-name {
+        font-size: 1.6rem;
+        margin-top: 0.75rem;
+    }
+
+    .staff-age {
+        font-size: 1.15rem;
+    }
+
+    .staff-picture {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .staff-picture img {
+        width: 80%;
+        max-width: 350px;
+        max-height: none;
+        margin: 0 auto;
+    }
+
+    .staff-bio {
+        width: 95%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .about-slogan {
+        padding: 1rem;
+    }
+
+    .about-slogan p {
+        font-size: 1.5rem;
+    }
+
+    .site-footer {
+        padding: 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Accessibility */
+
+/* Visible keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Active links */
+
+a:active {
+    color: gold;
+}
+
+/* Reduced motion preference */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
 
        
 /*Contact page styling*/
