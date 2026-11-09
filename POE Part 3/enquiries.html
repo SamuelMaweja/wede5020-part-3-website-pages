@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +77,7 @@
 
 <body>
 
-    
+    <!-- Website Header -->
 
     <header class="site-header">
 
@@ -155,12 +156,10 @@
 
             <!-- Enquiry Form -->
 
-            <form id="enquiryForm"
-                  action="submit-enquiry.php"
-                  method="POST">
+            <form id="enquiryForm">
 
 
-                
+                <!-- Full Name -->
 
                 <div class="form-group">
 
@@ -182,7 +181,7 @@
                 </div>
 
 
-           
+                <!-- Email Address -->
 
                 <div class="form-group">
 
@@ -201,7 +200,7 @@
                 </div>
 
 
-           
+                <!-- Phone Number -->
 
                 <div class="form-group">
 
@@ -220,7 +219,7 @@
                 </div>
 
 
-                <!-- Category multiple enquiry forms to choose from -->
+                <!-- Enquiry Category -->
 
                 <div class="form-group">
 
@@ -317,7 +316,7 @@
     </main>
 
 
-    
+    <!-- Website Footer -->
 
     <footer class="site-footer">
 
@@ -339,7 +338,7 @@
     </footer>
 
 
-    <!-- JavaScript Form Validation and AJAX Submission -->
+    <!-- JavaScript Form Validation and Submission Simulation -->
 
     <script>
 
@@ -355,8 +354,13 @@
             document.getElementById("submitButton");
 
 
+        // Preferred date element
+
         const preferredDate =
             document.getElementById("preferredDate");
+
+
+        // Set the minimum preferred date to today
 
         const today = new Date();
 
@@ -370,11 +374,12 @@
 
         // JavaScript Form Validation
 
-        enquiryForm.addEventListener("submit", async function(event) {
+        enquiryForm.addEventListener("submit", function(event) {
 
             // Prevent normal form submission
 
             event.preventDefault();
+
 
             // Clear previous messages
 
@@ -382,7 +387,7 @@
             formResponse.style.color = "";
 
 
-            
+            // Get form values
 
             const fullName =
                 document.getElementById("fullName").value.trim();
@@ -402,7 +407,9 @@
 
             // Validate full name
 
-            if (fullName.length < 3 || fullName.length > 60) {
+            if (fullName.length < 3 ||
+                fullName.length > 60 ||
+                !/^[A-Za-zÀ-ÿ '-]{3,60}$/.test(fullName)) {
 
                 formResponse.textContent =
                     "Please enter a valid full name.";
@@ -416,7 +423,8 @@
 
             // Validate email address
 
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+                email.length > 100) {
 
                 formResponse.textContent =
                     "Please enter a valid email address.";
@@ -457,7 +465,7 @@
             }
 
 
-        
+            // Validate enquiry message
 
             if (message.length < 10 || message.length > 1000) {
 
@@ -471,7 +479,7 @@
             }
 
 
-    
+            // Validate preferred date
 
             if (preferredDate.value &&
                 preferredDate.value < localDate) {
@@ -493,46 +501,14 @@
             submitButton.textContent = "Submitting...";
 
 
-            try {
+            // Simulate successful enquiry submission
 
-                // Collect form information
-
-                const formData = new FormData(enquiryForm);
+            setTimeout(function() {
 
 
-                // AJAX form submission
-
-                const response = await fetch(
-                    enquiryForm.action,
-                    {
-                        method: "POST",
-                        body: formData,
-                        headers: {
-                            "Accept": "application/json"
-                        }
-                    }
-                );
-
-
-                // Process server response
-
-                const result = await response.json();
-
-
-                if (!response.ok || !result.success) {
-
-                    throw new Error(
-                        result.message ||
-                        "Unable to submit your enquiry. Please try again."
-                    );
-
-                }
-
-
-                // Successful submission
+                // Display successful submission message
 
                 formResponse.textContent =
-                    result.message ||
                     "Thank you! Your enquiry has been submitted successfully. Our team will contact you soon.";
 
                 formResponse.style.color = "green";
@@ -543,26 +519,15 @@
                 enquiryForm.reset();
 
 
-            } catch (error) {
-
-                // Display submission errors
-
-                formResponse.textContent =
-                    error.message ||
-                    "Something went wrong. Please try again later.";
-
-                formResponse.style.color = "red";
-
-
-            } finally {
-
-                
+                // Enable submit button again
 
                 submitButton.disabled = false;
 
                 submitButton.textContent = "Submit Enquiry";
 
-            }
+
+            }, 1000);
+
 
         });
 
