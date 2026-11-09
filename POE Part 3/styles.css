@@ -1297,6 +1297,7 @@ a:focus-visible {
         height: 300px;
     }
 }
+
 /* Page styling for enquiries */
 
 * {
@@ -1335,6 +1336,8 @@ body {
     margin-bottom: 2rem;
 }
 
+
+/* Main Nav links */
 
 nav {
     display: flex;
@@ -1438,6 +1441,7 @@ nav a[aria-current="page"] {
 
 .enquiry-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -1476,11 +1480,202 @@ nav a[aria-current="page"] {
 }
 
 
+/* Enquiry container heading for the form */
+
+.enquiry-container h3 {
+    color: gold;
+
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+/* Enquiry container paragraph */
+
+.enquiry-container p {
+    color: white;
+
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin-bottom: 1.5rem;
+}
+
+/* Enquiry form */
+
+#enquiryForm {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 1.25rem;
+
+    text-align: left;
+}
+
+/* Form groups */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 0.5rem;
+}
+
+/* Form labels */
+
+.form-group label {
+    color: gold;
+
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Form input fields, select and textarea */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 0.85rem;
+
+    border: 0.0625rem solid gold;
+    border-radius: 0.4rem;
+
+    background-color: #1a1a1a;
+    color: white;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Placeholder area */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #bbbbbb;
+}
+
+/* Options select */
+
+.form-group select option {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Input keyboard focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: white;
+
+    box-shadow: 0 0 0.5rem gold;
+}
+
+/* Textarea */
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 8rem;
+}
+
+/* Date input */
+
+.form-group input[type="date"] {
+    color-scheme: dark;
+}
+
+/* Form submit button */
+
+#submitButton {
+    display: block;
+
+    width: 100%;
+
+    padding: 0.9rem;
+
+    background-color: gold;
+    color: black;
+
+    border: 0.0625rem solid gold;
+    border-radius: 0.4rem;
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Submit button hover */
+
+#submitButton:hover {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}
+
+/* Submit button active */
+
+#submitButton:active {
+    transform: scale(0.97);
+}
+
+/* Disabled submit button */
+
+#submitButton:disabled {
+    background-color: #777777;
+    color: white;
+
+    border-color: #777777;
+
+    cursor: not-allowed;
+}
+
+/* Submit button keyboard focus */
+
+#submitButton:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Form response and error messages */
+
+#formResponse {
+    width: 100%;
+
+    margin: 0.5rem 0 0;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    text-align: center;
+    line-height: 1.5;
+}
+
+
 
 .site-footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
+    gap: 0.5rem;
 
     padding: 1.875rem;
 
@@ -1495,6 +1690,18 @@ nav a[aria-current="page"] {
     font-size: 1rem;
     margin: 0;
 }
+
+/* Footer links */
+
+.site-footer a {
+    color: gold;
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    color: white;
+}
+
 
 /* Tablet responsive design */
 
@@ -1532,6 +1739,7 @@ nav a[aria-current="page"] {
 
     .enquiry-container {
         width: 85%;
+        padding: 1.75rem;
     }
 
     .site-footer {
@@ -1575,12 +1783,30 @@ nav a[aria-current="page"] {
 
     .enquiry-container {
         width: 95%;
-        padding: 1rem;
+        padding: 1.25rem;
+    }
+
+    .enquiry-container h3 {
+        font-size: 1.3rem;
     }
 
     .enquiry-description {
         font-size: 1rem;
         line-height: 1.5;
+    }
+
+    /* Mobile form styling */
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 0.75rem;
+    }
+
+    #submitButton {
+        font-size: 1rem;
+        padding: 0.8rem;
     }
 
     .site-footer {
