@@ -725,338 +725,348 @@
         }
         /*Products.html Css*/
 
-         table {
-            width: 90%;
-            max-width: 1000px;
-            border-collapse: collapse;
-            border: 2px solid gold;
-            margin-bottom: 20px;
-
-           
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease,
-                        border-color 0.3s ease;
-        }
-
-      
-        table:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 0 25px gold;
-            border-color: white;
-            cursor: pointer;
-        }
-
-       
-        td {
-            border: 1px solid gold;
-            padding: 25px;
-            text-align: center;
-            vertical-align: middle;
-        }
-
-      
-        td {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-        }
-
-        td img {
-            width: 250px;
-            height: 200px;
-            object-fit: cover;
-            border: 3px solid gold;
-            border-radius: 10px;
-
-            transition: transform 0.3s ease;
-        }
-
-        table:hover td img {
-            transform: scale(1.05);
-        }
-
-    
-        td p,
-        td p2 {
-            color: gold;
-            font-size: 24px;
-            margin: 0;
-
-            transition: color 0.3s ease;
-        }
-
-       
-        table:hover td p,
-        table:hover td p2 {
-            color: white;
-        }
-
-    
-        td h1 {
-            color: white;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        td h2 {
-            color: gold;
-            font-size: 24px;
-            margin: 0;
-
-            transition: transform 0.3s ease;
-        }
-
         
-        table:hover td h2 {
-            transform: scale(1.15);
-        }
-          /* Products.html Responsive design */
-        @media (max-width: 60em) {
+/*Font and general styling for the products page */
 
-            header {
-                gap: 1.5rem;
-                padding: 2rem 4%;
-            }
+* {
+    box-sizing: border-box;
+}
 
-            table {
-                width: 90%;
-            }
+body {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+}
 
-            td {
-                padding: 1.25rem;
-            }
 
-            td img {
-                width: 50%;
-            }
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 5%;
+    justify-items: center;
+    width: 100%;
+}
 
-            td p,
-            td p2 {
-                font-size: 1.35rem;
-            }
+.page-title {
+    color: gold;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
 
-            td h1 {
-                font-size: 1.1rem;
-                width: 95%;
-            }
+/*Navigation */
 
-            td h2 {
-                font-size: 1.35rem;
-            }
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
 
-            nav ul {
-                gap: 1em;
-            }
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-            nav a {
-                font-size: 1rem;
-            }
-        }
+nav a {
+    display: block;
+    color: gold;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
 
-        
-        @media (max-width: 40em) {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
 
-            header {
-                gap: 1rem;
-                padding: 1.5rem 2%;
-            }
+/* Navigation hover */
 
-            table {
-                width: 95%;
-                margin-bottom: 1rem;
-            }
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
 
-            table:hover {
-                transform: translateY(-0.3rem) scale(1.01);
-                box-shadow: 0 0 1rem gold;
-            }
+/* Navigation keyboard focus */
 
-            td {
-                padding: 1rem;
-                gap: 0.75em;
-            }
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+    background-color: blue;
+    color: white;
+}
 
-            td img {
-                width: 75%;
-                max-width: 15.625rem;
-            }
+/* Navigation active state */
 
-            td p,
-            td p2 {
-                font-size: 1.2rem;
-            }
+nav a:active {
+    transform: scale(0.95);
+}
 
-            td h1 {
-                font-size: 1rem;
-                width: 100%;
-                line-height: 1.5;
-            }
+/* Current page */
 
-            td h2 {
-                font-size: 1.25rem;
-            }
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
 
-            nav {
-                margin-top: 1rem;
-            }
 
-            nav ul {
-                flex-direction: column;
-                gap: 0.5em;
-            }
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1.5rem 5%;
+}
 
-            nav a {
-                display: block;
-                font-size: 1rem;
-                padding: 0.6em 1em;
-            }
-        }
 
-         <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Carbonara.jpg"
-                            sizes="75vw">
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9375rem;
 
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Carbonara.jpg"
-                            sizes="50vw">
+    width: 100%;
+    max-width: 30rem;
+    padding: 1.5625rem;
 
-                        <img
-                            src="Carbonara.jpg"
-                            srcset="Carbonara.jpg 250w,
-                                    Carbonara.jpg 500w,
-                                    Carbonara.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
+    text-align: center;
+    border: 0.125rem solid gold;
+    border-radius: 0.6rem;
 
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Frutti.jpg"
-                            sizes="75vw">
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
 
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Frutti.jpg"
-                            sizes="50vw">
+/* Product hover animation */
 
-                        <img
-                            src="Frutti.jpg"
-                            srcset="Frutti.jpg 250w,
-                                    Frutti.jpg 500w,
-                                    Frutti.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
+.product-card:hover {
+    transform: translateY(-0.625rem) scale(1.02);
+    box-shadow: 0 0 1.5625rem gold;
+    border-color: white;
+}
 
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Cacio.jpg"
-                            sizes="75vw">
+/* Product keyboard focus */
 
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Cacio.jpg"
-                            sizes="50vw">
+.product-card:focus-within {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.25rem;
+}
 
-                        <img
-                            src="Cacio.jpg"
-                            srcset="Cacio.jpg 250w,
-                                    Cacio.jpg 500w,
-                                    Cacio.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
 
-                     <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Risotto.jpg"
-                            sizes="75vw">
 
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Risotto.jpg"
-                            sizes="50vw">
+.product-card picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
-                        <img
-                            src="Risotto.jpg"
-                            srcset="Risotto.jpg 250w,
-                                    Risotto.jpg 500w,
-                                    Risotto.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
+.product-card img {
+    display: block;
+    width: 40%;
+    max-width: 15.625rem;
+    height: auto;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
 
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Aperol Spritz.jpg"
-                            sizes="75vw">
+    border: 0.2rem solid gold;
+    border-radius: 0.6rem;
 
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Aperol Spritz.jpg"
-                            sizes="50vw">
+    transition: transform 0.3s ease;
+}
 
-                        <img
-                            src="Aperol Spritz.jpg"
-                            srcset="Aperol Spritz.jpg 250w,
-                                    Aperol Spritz.jpg 500w,
-                                    Aperol Spritz.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
+/* Image hover animation */
 
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Campari.jpg"
-                            sizes="75vw">
+.product-card:hover img {
+    transform: scale(1.05);
+}
 
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Campari.jpg"
-                            sizes="50vw">
 
-                        <img
-                            src="Campari.jpg"
-                            srcset="Campari.jpg 250w,
-                                    Campari.jpg 500w,
-                                    Campari.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
-                     </style>
+
+.product-name {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    width: 100%;
+
+    transition: color 0.3s ease;
+}
+
+.product-card:hover .product-name {
+    color: white;
+}
+
+
+.product-description {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    width: 90%;
+}
+
+
+.product-price {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-price {
+    transform: scale(1.15);
+}
+
+/* Responsive tablet design*/
+
+@media (max-width: 60em) {
+
+    header {
+        gap: 1.5rem;
+        padding: 2rem 4%;
+    }
+
+    .products-container {
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        padding: 1.25rem;
+    }
+
+    .product-card img {
+        width: 50%;
+    }
+
+    .product-name {
+        font-size: 1.35rem;
+    }
+
+    .product-description {
+        font-size: 1.1rem;
+        width: 95%;
+    }
+
+    .product-price {
+        font-size: 1.35rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
+
+/*Responsive mobile design*/
+
+@media (max-width: 40em) {
+
+    header {
+        gap: 1rem;
+        padding: 1.5rem 2%;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 3%;
+    }
+
+    .product-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .product-card:hover {
+        transform: translateY(-0.3rem) scale(1.01);
+        box-shadow: 0 0 1rem gold;
+    }
+
+    .product-card img {
+        width: 75%;
+        max-width: 15.625rem;
+    }
+
+    .product-name {
+        font-size: 1.2rem;
+    }
+
+    .product-description {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .product-price {
+        font-size: 1.25rem;
+    }
+
+    nav {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+}
+
+/*Accessibility */
+
+/* Clear keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Active links */
+
+a:active {
+    color: white;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

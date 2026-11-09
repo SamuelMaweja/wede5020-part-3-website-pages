@@ -1,551 +1,155 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<body>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="author" content="Mpiana Samuel Maweja">
-    <meta name="description" content="describe the business">
+    <meta name="description" content="Explore VillaSerenita's Italian menu.">
     <meta name="keywords" content="reservations, delivery, events">
-    <link rel="stylesheet"
-     href="styles.css">
-     <!--info about the products-->
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
-        
-        body {
-            margin: 0;
-            background-color: black;
-            color: white;
-            font-family: 'Fredoka', sans-serif;
-
-            display: grid;
-            min-height: 100vh;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        header {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            padding: 2.5rem 5%;
-            justify-items: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Tables to help separate each product to help with readability */
-        table {
-            width: 90%;
-            max-width: 62.5rem;
-            border-collapse: collapse;
-            border: 0.125em solid gold;
-            margin-bottom: 1.25rem;
-
-            /* Animation settings will play when a user hovers over them so the user know which one has been selected */
-            transition: transform 0.3s ease,
-                        box-shadow 0.3s ease,
-                        border-color 0.3s ease;
-        }
-
-        /* Product hover animation Css */
-        table:hover {
-            transform: translateY(-0.625rem) scale(1.03);
-            box-shadow: 0 0 1.5625rem gold;
-            border-color: white;
-            cursor: pointer;
-        }
-
-        /* Cells for the tables */
-        td {
-            border: 0.0625rem solid gold;
-            padding: 1.5625rem;
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        /* Flexbox for the product information */
-        td {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 0.9375em;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Product images */
-        td img {
-            width: 40%;
-            max-width: 15.625rem;
-            height: auto;
-            aspect-ratio: 5 / 4;
-            object-fit: cover;
-            border: 0.2em solid gold;
-            border-radius: 0.6rem;
-
-            transition: transform 0.3s ease;
-        }
-
-        /* Center product images */
-        td picture {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-
-        /* Image hover animation */
-        table:hover td img {
-            transform: scale(1.05);
-        }
-
-        /* Product names */
-        td p,
-        td p2 {
-            color: gold;
-            font-size: 1.5rem;
-            margin: 0;
-            width: 100%;
-
-            transition: color 0.3s ease;
-        }
-
-        /* Product name hover */
-        table:hover td p,
-        table:hover td p2 {
-            color: white;
-        }
-
-        /* Product descriptions */
-        td h1 {
-            color: white;
-            font-size: 1.25rem;
-            font-weight: 400;
-            line-height: 1.5;
-            margin: 0;
-            width: 90%;
-        }
-
-        /* Product prices */
-        td h2 {
-            color: gold;
-            font-size: 1.5rem;
-            margin: 0;
-
-            transition: transform 0.3s ease;
-        }
-
-        /* Price hover animation */
-        table:hover td h2 {
-            transform: scale(1.15);
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-
-            /* Moves navigation above all the product tables */
-            order: -1;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5em;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        /* Navigation options */
-        nav a {
-            color: gold;
-            text-decoration: none;
-            font-size: 1.125rem;
-            font-weight: 500;
-            padding: 0.6em 0.9em;
-            border-radius: 0.3em;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Navigation hover effect */
-        nav a:hover {
-            background-color: blue;
-            color: white;
-        }
-
-        /* List items */
-        li {
-            list-style: none;
-        }
-
-        /* Responsive design for tablets */
-        @media (max-width: 60em) {
-
-            header {
-                gap: 1.5rem;
-                padding: 2rem 4%;
-            }
-
-            table {
-                width: 90%;
-            }
-
-            td {
-                padding: 1.25rem;
-            }
-
-            td img {
-                width: 50%;
-            }
-
-            td p,
-            td p2 {
-                font-size: 1.35rem;
-            }
-
-            td h1 {
-                font-size: 1.1rem;
-                width: 95%;
-            }
-
-            td h2 {
-                font-size: 1.35rem;
-            }
-
-            nav ul {
-                gap: 1em;
-            }
-
-            nav a {
-                font-size: 1rem;
-            }
-        }
-
-        /* Responsive design for smaller screens */
-        @media (max-width: 40em) {
-
-            header {
-                gap: 1rem;
-                padding: 1.5rem 2%;
-            }
-
-            table {
-                width: 95%;
-                margin-bottom: 1rem;
-            }
-
-            table:hover {
-                transform: translateY(-0.3rem) scale(1.01);
-                box-shadow: 0 0 1rem gold;
-            }
-
-            td {
-                padding: 1rem;
-                gap: 0.75em;
-            }
-
-            td img {
-                width: 75%;
-                max-width: 15.625rem;
-            }
-
-            td p,
-            td p2 {
-                font-size: 1.2rem;
-            }
-
-            td h1 {
-                font-size: 1rem;
-                width: 100%;
-                line-height: 1.5;
-            }
-
-            td h2 {
-                font-size: 1.25rem;
-            }
-
-            nav {
-                margin-top: 0;
-                margin-bottom: 1rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0.5em;
-            }
-
-            nav a {
-                display: block;
-                font-size: 1rem;
-                padding: 0.6em 1em;
-            }
-        }
-    </style>
-</head>
 
     <title>Courses</title>
 
-     <header> 
+    <link rel="stylesheet" href="styles.css">
 
-        <!-- Users will see a list of the products -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+          rel="stylesheet">
+</head>
 
-        <nav>
+<body>
+
+    <header>
+        <h1 class="page-title">Our Menu</h1>
+
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html ">About Us</a></li> 
-                <li><a href="enquiries.html"> Help</a></li>  
-                <li><a href="contacts.html ">Contact information</a></li> 
-                <li><a href="products.html"> Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="enquiries.html">Help</a></li>
+                <li><a href="contacts.html">Contact Information</a></li>
+                <li><a href="products.html" aria-current="page">Courses</a></li>
             </ul>
         </nav>
+    </header>
 
-        <table>
-            <tr>
-                <td>
+    <main class="products-container">
 
-                    <!-- Responsive Carbonara image -->
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Carbonara.jpg"
-                            sizes="75vw">
+        <!-- Carbonara -->
+        <article class="product-card">
+            <picture>
+                <source media="(max-width: 40em)" srcset="Carbonara.jpg">
+                <source media="(max-width: 60em)" srcset="Carbonara.jpg">
+                <img src="Carbonara.jpg"
+                     width="250"
+                     height="200"
+                     alt="VillaSerenita's signature Carbonara pasta">
+            </picture>
 
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Carbonara.jpg"
-                            sizes="50vw">
+            <h2 class="product-name">Carbonara</h2>
+            <p class="product-description">
+                VillaSerenita's signature dish, the Carbonara.
+            </p>
+            <p class="product-price">R130</p>
+        </article>
 
-                        <img
-                            src="Carbonara.jpg"
-                            srcset="Carbonara.jpg 250w,
-                                    Carbonara.jpg 500w,
-                                    Carbonara.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
+        <!-- Frutti di Mare -->
+        <article class="product-card">
+            <picture>
+                <source media="(max-width: 40em)" srcset="Frutti.jpg">
+                <source media="(max-width: 60em)" srcset="Frutti.jpg">
+                <img src="Frutti.jpg"
+                     width="250"
+                     height="200"
+                     alt="Frutti di Mare seafood pasta">
+            </picture>
 
-                    <b><p>Carbonara</p></b>
+            <h2 class="product-name">Frutti di Mare</h2>
+            <p class="product-description">
+                A classic seafood dish.
+            </p>
+            <p class="product-price">R110</p>
+        </article>
 
-                    <h1>VillaSerenita's signature dish the carbonara.</h1>
+        <!-- Cacio e Pepe -->
+        <article class="product-card">
+            <picture>
+                <source media="(max-width: 40em)" srcset="Cacio.jpg">
+                <source media="(max-width: 60em)" srcset="Cacio.jpg">
+                <img src="Cacio.jpg"
+                     width="250"
+                     height="200"
+                     alt="Cacio e Pepe Roman pasta">
+            </picture>
 
-                    <li><b><h2>R130</h2></b></li>
-                </td>
-            </tr>
-        </table>
+            <h2 class="product-name">Cacio e Pepe</h2>
+            <p class="product-description">
+                A simple but classic Roman pasta dish.
+            </p>
+            <p class="product-price">R105</p>
+        </article>
 
+        <!-- Risotto -->
+        <article class="product-card">
+            <picture>
+                <source media="(max-width: 40em)" srcset="Risotto.jpg">
+                <source media="(max-width: 60em)" srcset="Risotto.jpg">
+                <img src="Risotto.jpg"
+                     width="250"
+                     height="200"
+                     alt="Creamy Italian Risotto">
+            </picture>
 
-        <table>
-            <tr>
-                <td>
+            <h2 class="product-name">Risotto</h2>
+            <p class="product-description">
+                A creamy, slow-cooked rice dish made using
+                starchy Italian rice and broth.
+            </p>
+            <p class="product-price">R70</p>
+        </article>
 
-                    <!-- Responsive Frutti di mare image -->
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Frutti.jpg"
-                            sizes="75vw">
+        <!-- Aperol Spritz -->
+        <article class="product-card">
+            <picture>
+                <source media="(max-width: 40em)" srcset="Aperol Spritz.jpg">
+                <source media="(max-width: 60em)" srcset="Aperol Spritz.jpg">
+                <img src="Aperol Spritz.jpg"
+                     width="250"
+                     height="200"
+                     alt="A glass of Aperol Spritz">
+            </picture>
 
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Frutti.jpg"
-                            sizes="50vw">
+            <h2 class="product-name">Aperol Spritz</h2>
+            <p class="product-description">
+                A bright orange pre-dinner drink made with
+                Prosecco, Aperol and soda water.
+            </p>
+            <p class="product-price">R85</p>
+        </article>
 
-                        <img
-                            src="Frutti.jpg"
-                            srcset="Frutti.jpg 250w,
-                                    Frutti.jpg 500w,
-                                    Frutti.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
+        <!-- Campari -->
+        <article class="product-card">
+            <picture>
+                <source media="(max-width: 40em)" srcset="Campari.jpg">
+                <source media="(max-width: 60em)" srcset="Campari.jpg">
+                <img src="Campari.jpg"
+                     width="250"
+                     height="200"
+                     alt="A glass of Campari">
+            </picture>
 
-                    <li><b><p2>Frutti di mare</p2></b></li>
+            <h2 class="product-name">Campari</h2>
+            <p class="product-description">
+                A deep red, bitter herbal liqueur often served
+                on the rocks or with soda.
+            </p>
+            <p class="product-price">R90</p>
+        </article>
 
-                    <h1>A classic seafood dish</h1>
+    </main>
 
-                    <li><b><h2>R110</h2></b></li>
-                </td>
-            </tr>
-        </table>
-
-
-        <table>
-            <tr>
-                <td>
-
-                    <!-- Responsive Cacio e pepe image -->
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Cacio.jpg"
-                            sizes="75vw">
-
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Cacio.jpg"
-                            sizes="50vw">
-
-                        <img
-                            src="Cacio.jpg"
-                            srcset="Cacio.jpg 250w,
-                                    Cacio.jpg 500w,
-                                    Cacio.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
-
-                    <li><b><p>Cacio e pepe</p></b></li>
-
-                    <h1>A simple but classic roman pasta dish</h1>
-
-                    <li><b><h2>R105</h2></b></li>
-                </td>
-            </tr>
-        </table>
-
-
-        <table>
-            <tr>
-                <td>
-
-                    <!-- Responsive Risotto image -->
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Risotto.jpg"
-                            sizes="75vw">
-
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Risotto.jpg"
-                            sizes="50vw">
-
-                        <img
-                            src="Risotto.jpg"
-                            srcset="Risotto.jpg 250w,
-                                    Risotto.jpg 500w,
-                                    Risotto.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
-
-                    <li><b><p>Risotto</p></b></li>
-
-                    <h1>A creamy, slow-cooked rice dish made using starchy Italian rice and broth</h1>
-
-                    <li><b><h2>R70</h2></b></li>
-                </td>
-            </tr>
-        </table>
-
-
-        <table>
-            <tr>
-                <td>
-
-                    <!-- Responsive Aperol Spritz image -->
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Aperol Spritz.jpg"
-                            sizes="75vw">
-
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Aperol Spritz.jpg"
-                            sizes="50vw">
-
-                        <img
-                            src="Aperol Spritz.jpg"
-                            srcset="Aperol Spritz.jpg 250w,
-                                    Aperol Spritz.jpg 500w,
-                                    Aperol Spritz.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
-
-                    <li><b><p>Aperol Spritz</p></b></li>
-
-                    <h1>A bright orange pre-dinner drink made with Prosecco, Aperol, and soda water</h1>
-
-                    <li><b><h2>R85</h2></b></li>
-                </td>
-            </tr>
-        </table>
-
-
-        <table>
-            <tr>
-                <td>
-
-                    <!-- Responsive Campari image. -->
-                    <picture>
-                        <source
-                            media="(max-width: 40em)"
-                            srcset="Campari.jpg"
-                            sizes="75vw">
-
-                        <source
-                            media="(max-width: 60em)"
-                            srcset="Campari.jpg"
-                            sizes="50vw">
-
-                        <img
-                            src="Campari.jpg"
-                            srcset="Campari.jpg 250w,
-                                    Campari.jpg 500w,
-                                    Campari.jpg 750w"
-                            sizes="(max-width: 40em) 75vw,
-                                   (max-width: 60em) 50vw,
-                                   40vw"
-                            width="250"
-                            height="200"
-                            alt="item on menu">
-                    </picture>
-
-                    <li><b><p>Campari</p></b></li>
-
-                    <h1>A deep red, bitter herbal liqueur often served on the rocks or with soda</h1>
-
-                    <li><b><h2>R90</h2></b></li>
-                </td>
-            </tr>
-        </table>
-
-     </header>
-
+</body>
 </html>
