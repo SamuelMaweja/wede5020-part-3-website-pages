@@ -11,24 +11,27 @@
 
     <title>Contact Us</title>
 
-    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Your existing CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
           rel="stylesheet">
+
 </head>
 
 <body>
 
-    
     <header class="site-header">
 
         <h1 class="page-title">Founded in 2015</h1>
 
-        
         <nav aria-label="Main navigation">
             <ul class="navigation-list">
                 <li><a href="index.html">Home</a></li>
@@ -41,7 +44,6 @@
 
     </header>
 
-   
     <main class="contact-main">
 
         <h2 class="section-title">Get in Touch</h2>
@@ -62,9 +64,19 @@
 
         </ul>
 
+        <!-- Interactive Map -->
+        <section class="location-section">
+
+            <h2>Find Us</h2>
+
+            <p>Visit VillaSerenita using our interactive map.</p>
+
+            <div id="map"></div>
+
+        </section>
+
     </main>
 
-    
     <footer class="site-footer">
 
         <section class="social-section">
@@ -95,5 +107,10 @@
 
     </footer>
 
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Your map JavaScript -->
+  <script src="js/map.js"></script>
 </body>
 </html>
