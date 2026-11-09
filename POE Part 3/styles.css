@@ -1,0 +1,1891 @@
+/*Universal Styles shared across each page*/
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+  body {
+            margin: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Fredoka', sans-serif;
+
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header {
+            display: grid;
+            justify-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+         nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+         nav a:hover {
+            background-color: blue;
+            color: white;
+        } 
+
+     
+        
+/* Page styling for Index page */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+
+    font-family: 'Fredoka', sans-serif;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+.site-header {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+
+    padding: 2rem;
+    width: 100%;
+}
+
+/* Logo */
+
+.logo-picture {
+    display: block;
+    grid-row: 1;
+
+    width: 45%;
+    max-width: 350px;
+
+    margin: 0 auto 1.25rem;
+}
+
+.logo-picture img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/*Navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+
+    grid-row: 2;
+
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+}
+
+nav a {
+    display: block;
+
+    color: gold;
+    text-decoration: none;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    padding: 0.6em 0.85em;
+    border-radius: 0.3em;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Navigation hover */
+
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation keyboard focus */
+
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation active */
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+/* Current page */
+
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
+
+/* Restaurant image */
+
+.restaurant-picture {
+    display: block;
+
+    grid-row: 3;
+
+    width: 80%;
+    max-width: 800px;
+
+    margin: 1.25rem auto 1.875rem;
+}
+
+.restaurant-picture img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+    border: 0.2rem solid gold;
+    border-radius: 0.6rem;
+
+    box-shadow: 0 0 1.25rem gold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+
+/* MAIN SECTION */
+
+.home-main {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    padding: 2.5rem;
+    width: 100%;
+}
+
+/* FOOTER */
+
+.site-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2rem;
+
+    padding: 1.5rem;
+
+    border-top: 0.0625rem solid gold;
+
+    text-align: center;
+    width: 100%;
+}
+
+/* Footer sections */
+
+.footer-section {
+    display: grid;
+    justify-items: center;
+
+    gap: 0.6rem;
+}
+
+/* Footer headings */
+
+.footer-heading {
+    color: gold;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Footer lists */
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 0.6rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Footer list items */
+
+.footer-list li {
+    list-style: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Footer links */
+
+.footer-list a {
+    color: white;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+/* Footer hover */
+
+.footer-list a:hover {
+    color: gold;
+}
+
+/* Footer focus */
+
+.footer-list a:focus-visible {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.25rem;
+}
+
+/* Footer active */
+
+.footer-list a:active {
+    color: gold;
+}
+
+/* Tablet responsive design */
+
+@media (max-width: 60em) {
+
+    .site-header {
+        padding: 1.5rem;
+    }
+
+    .logo-picture {
+        width: 50%;
+    }
+
+    .restaurant-picture {
+        width: 90%;
+    }
+
+    .navigation-list {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .home-main {
+        padding: 2rem;
+    }
+
+    .site-footer {
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 40em) {
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    .logo-picture {
+        width: 70%;
+    }
+
+    .restaurant-picture {
+        width: 100%;
+        margin: 1rem auto 1.5rem;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+
+    .home-main {
+        padding: 1.5rem;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+        padding: 1.25rem;
+    }
+}
+
+/* Accessibility */
+
+/* Visible keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Reduced motion support */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+        
+/* Page styling for About Us page*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.page-title {
+    color: gold;
+    font-size: 2rem;
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+
+    color: gold;
+    text-decoration: none;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Navigation hover */
+
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation keyboard focus */
+
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation active */
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+/* Current page */
+
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
+
+/* Main About page section */
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 1rem 2rem 2.5rem;
+
+    gap: 2.5rem;
+}
+
+/* Staff cards */
+
+.staff-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+    max-width: 68.75rem;
+
+    padding: 1.5rem;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.6rem;
+
+    text-align: center;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Staff card hover */
+
+.staff-card:hover {
+    border-color: white;
+    box-shadow: 0 0 1rem gold;
+    transform: translateY(-0.25rem);
+}
+
+/* Keyboard focus within staff card */
+
+.staff-card:focus-within {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.25rem;
+}
+
+/* Staff headings */
+
+.staff-name {
+    color: gold;
+    font-size: 2rem;
+
+    margin: 1rem 0 0.5rem;
+    text-align: center;
+}
+
+.staff-age {
+    color: white;
+    font-size: 1.375rem;
+
+    margin: 0.5rem 0 1rem;
+    text-align: center;
+}
+
+/* Staff images */
+
+.staff-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 1.25rem 0;
+}
+
+.staff-picture img {
+    display: block;
+
+    width: 35%;
+    max-width: 350px;
+    max-height: 300px;
+
+    height: auto;
+    aspect-ratio: 7 / 6;
+
+    object-fit: cover;
+
+    border-radius: 0.6rem;
+    border: 0.2rem solid gold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Staff image hover */
+
+.staff-picture img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 1rem gold;
+}
+
+/* Staff's descriptions */
+
+.staff-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 68.75rem;
+}
+
+.staff-bio {
+    color: white;
+
+    font-size: 1.125rem;
+    line-height: 1.7;
+
+    margin: 0.9rem 0;
+
+    width: 90%;
+    max-width: 68.75rem;
+
+    text-align: center;
+}
+
+/* Slogan */
+
+.about-slogan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.about-slogan p {
+    color: gold;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.875rem;
+
+    border-top: 0.0625rem solid gold;
+
+    color: white;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    width: 100%;
+    text-align: center;
+}
+
+.footer-description {
+    width: 90%;
+    max-width: 68.75rem;
+    margin: 0;
+}
+
+/* Tablet responsive design */
+
+@media (max-width: 60em) {
+
+    .site-header {
+        padding: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .staff-card {
+        width: 95%;
+        padding: 1.25rem;
+    }
+
+    .staff-picture img {
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .staff-name {
+        font-size: 1.8rem;
+    }
+
+    .staff-age {
+        font-size: 1.25rem;
+    }
+
+    .staff-bio {
+        font-size: 1.05rem;
+    }
+
+    .navigation-list {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .about-main {
+        padding: 1rem 1.5rem 2rem;
+        gap: 2rem;
+    }
+
+    .site-footer {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 40em) {
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav {
+        margin-bottom: 1.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+
+    .about-main {
+        padding: 0.5rem 0.75rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .staff-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .staff-name {
+        font-size: 1.6rem;
+        margin-top: 0.75rem;
+    }
+
+    .staff-age {
+        font-size: 1.15rem;
+    }
+
+    .staff-picture {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .staff-picture img {
+        width: 80%;
+        max-width: 350px;
+        max-height: none;
+        margin: 0 auto;
+    }
+
+    .staff-bio {
+        width: 95%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .about-slogan {
+        padding: 1rem;
+    }
+
+    .about-slogan p {
+        font-size: 1.5rem;
+    }
+
+    .site-footer {
+        padding: 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Accessibility */
+
+/* Visible keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Active links */
+
+a:active {
+    color: gold;
+}
+
+/* Reduced motion preference */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+       
+/*Contact page styling*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 2rem;
+    width: 100%;
+}
+
+.page-title {
+    color: gold;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+
+    color: gold;
+    text-decoration: none;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Navigation hover */
+
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation focus */
+
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation active */
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+/* Current page */
+
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
+
+/* Contact section */
+
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.25rem;
+
+    flex: 1;
+    padding: 3.125rem;
+
+    text-align: center;
+    width: 100%;
+}
+
+.section-title {
+    color: gold;
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+}
+
+
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.25rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Contact information */
+
+.contact-item {
+    list-style: none;
+
+    color: white;
+    font-size: 1.375rem;
+
+    padding: 0.75em 1.5em;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.6rem;
+
+    width: 60%;
+    max-width: 31.25rem;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Contact hover */
+
+.contact-item:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 1rem gold;
+    border-color: white;
+}
+
+/* Contact links */
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: gold;
+}
+
+/* Contact keyboard focus */
+
+.contact-item a:focus-visible {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.3rem;
+}
+
+/* Contact active */
+
+.contact-item a:active {
+    color: gold;
+}
+
+
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.875rem;
+
+    border-top: 0.0625rem solid gold;
+
+    width: 100%;
+}
+
+/* Social media section */
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.footer-title {
+    color: gold;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Social media list */
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-list li {
+    list-style: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Social media links */
+
+.social-list a {
+    color: white;
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.social-list a:hover {
+    color: gold;
+}
+
+.social-list a:focus-visible {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.25rem;
+}
+
+.social-list a:active {
+    color: white;
+    transform: scale(0.95);
+}
+
+/*Tablet responsive design */
+
+@media (max-width: 60em) {
+
+    .site-header {
+        padding: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .navigation-list {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.6em 0.8em;
+    }
+
+    .contact-main {
+        padding: 2.5rem;
+    }
+
+    .contact-item {
+        width: 75%;
+        font-size: 1.2rem;
+    }
+
+    .site-footer {
+        padding: 1.5rem;
+    }
+}
+
+/*Mobile responsive design */
+
+@media (max-width: 40em) {
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+
+    .contact-main {
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-item {
+        width: 95%;
+        min-width: 0;
+
+        font-size: 1.05rem;
+        padding: 0.8em 1em;
+    }
+
+    .site-footer {
+        padding: 1.25rem 1rem;
+    }
+
+    .social-list {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .social-list li {
+        font-size: 0.95rem;
+    }
+}
+
+/*Accessibility */
+
+/* Visible keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Reduced motion for accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+        
+/* Page styling for enquiries */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+
+    font-family: 'Fredoka', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 2rem;
+    width: 100%;
+}
+
+.page-title {
+    color: gold;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+
+    color: gold;
+    text-decoration: none;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Navigation hover */
+
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation keyboard focus */
+
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation active */
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+/* Current page */
+
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
+
+/* Main enquiry section */
+
+.enquiry-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    text-align: center;
+    gap: 1.25rem;
+
+    flex: 1;
+    padding: 1rem 5% 3.125rem;
+
+    width: 100%;
+}
+
+/* Main question */
+
+.enquiry-heading {
+    color: gold;
+
+    font-size: 1.875rem;
+    font-weight: 500;
+
+    margin: 0;
+
+    width: 100%;
+    max-width: 50rem;
+}
+
+/* Enquiry container */
+
+.enquiry-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    max-width: 43.75rem;
+
+    padding: 1.25rem;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.6rem;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Enquiry container hover */
+
+.enquiry-container:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 1rem gold;
+    border-color: white;
+}
+
+/* Enquiry description */
+
+.enquiry-description {
+    color: white;
+
+    font-size: 1.25rem;
+    line-height: 1.6;
+
+    width: 100%;
+    margin: 0;
+}
+
+
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.875rem;
+
+    border-top: 0.0625rem solid gold;
+
+    min-height: 3.125rem;
+    width: 100%;
+}
+
+.footer-text {
+    color: gold;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Tablet responsive design */
+
+@media (max-width: 60em) {
+
+    .site-header {
+        padding: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .navigation-list {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.6em 0.8em;
+    }
+
+    .enquiry-main {
+        padding: 2.5rem 5%;
+    }
+
+    .enquiry-heading {
+        font-size: 1.6rem;
+    }
+
+    .enquiry-description {
+        font-size: 1.1rem;
+    }
+
+    .enquiry-container {
+        width: 85%;
+    }
+
+    .site-footer {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 40em) {
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+
+    .enquiry-main {
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .enquiry-heading {
+        font-size: 1.4rem;
+        width: 95%;
+    }
+
+    .enquiry-container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .enquiry-description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .site-footer {
+        padding: 1.25rem 1rem;
+        min-height: 2.5rem;
+    }
+}
+
+/* Accessibility */
+
+/* Keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Active links */
+
+a:active {
+    color: white;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+        
+/*Font and general styling for the products page */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 5%;
+    justify-items: center;
+    width: 100%;
+}
+
+.page-title {
+    color: gold;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+/*Navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: gold;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Navigation hover */
+
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation keyboard focus */
+
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation active state */
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+/* Current page */
+
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
+
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1.5rem 5%;
+}
+
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9375rem;
+
+    width: 100%;
+    max-width: 30rem;
+    padding: 1.5625rem;
+
+    text-align: center;
+    border: 0.125rem solid gold;
+    border-radius: 0.6rem;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Product hover animation */
+
+.product-card:hover {
+    transform: translateY(-0.625rem) scale(1.02);
+    box-shadow: 0 0 1.5625rem gold;
+    border-color: white;
+}
+
+/* Product keyboard focus */
+
+.product-card:focus-within {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.25rem;
+}
+
+
+
+.product-card picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.product-card img {
+    display: block;
+    width: 40%;
+    max-width: 15.625rem;
+    height: auto;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+
+    border: 0.2rem solid gold;
+    border-radius: 0.6rem;
+
+    transition: transform 0.3s ease;
+}
+
+/* Image hover animation */
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+
+
+.product-name {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    width: 100%;
+
+    transition: color 0.3s ease;
+}
+
+.product-card:hover .product-name {
+    color: white;
+}
+
+
+.product-description {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    width: 90%;
+}
+
+
+.product-price {
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-price {
+    transform: scale(1.15);
+}
+
+/* Responsive tablet design*/
+
+@media (max-width: 60em) {
+
+    header {
+        gap: 1.5rem;
+        padding: 2rem 4%;
+    }
+
+    .products-container {
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        padding: 1.25rem;
+    }
+
+    .product-card img {
+        width: 50%;
+    }
+
+    .product-name {
+        font-size: 1.35rem;
+    }
+
+    .product-description {
+        font-size: 1.1rem;
+        width: 95%;
+    }
+
+    .product-price {
+        font-size: 1.35rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
+
+/*Responsive mobile design*/
+
+@media (max-width: 40em) {
+
+    header {
+        gap: 1rem;
+        padding: 1.5rem 2%;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 3%;
+    }
+
+    .product-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .product-card:hover {
+        transform: translateY(-0.3rem) scale(1.01);
+        box-shadow: 0 0 1rem gold;
+    }
+
+    .product-card img {
+        width: 75%;
+        max-width: 15.625rem;
+    }
+
+    .product-name {
+        font-size: 1.2rem;
+    }
+
+    .product-description {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .product-price {
+        font-size: 1.25rem;
+    }
+
+    nav {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+}
+
+/*Accessibility */
+
+/* Clear keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Active links */
+
+a:active {
+    color: white;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
