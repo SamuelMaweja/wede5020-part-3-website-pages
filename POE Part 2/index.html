@@ -1,222 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="author" content="Mpiana Samuel Maweja">
-    <meta name="description" content="describe the business">
+    <meta name="description" content="Welcome to VillaSerenita, an Italian restaurant.">
     <meta name="keywords" content="reservations, delivery, events">
-    <title>VillaSerenita</title> <!-- Each page will have different titles -->
-    <link rel="stylesheet"
-     href="styles.css">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+    <title>VillaSerenita</title>
 
-        /* Used a grid for its two-dimensional control */
-        body {
-            margin: 0;
-            background-color: black;
-            color: white;
-            font-family: 'Fredoka', sans-serif;
+    <link rel="stylesheet" href="styles.css">
 
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            min-height: 100vh;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* Css to structure the header */
-        header {
-            display: grid;
-            justify-items: center;
-            text-align: center;
-            padding: 2rem;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Css to make the logo be on the top and center of the screen */
-        header img {
-            display: block;
-            margin: 0 auto 1.25rem auto;
-            width: 45%;
-            height: auto;
-            max-width: 350px;
-            object-fit: contain;
-            grid-row: 1;
-        }
-
-        /* Css specifically for the image on home screen */
-        header img[src="Restaurant.jpg"] {
-            grid-row: 3;
-            width: 80%;
-            height: auto;
-            max-width: 800px;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
-            border: 0.2em solid gold;
-            border-radius: 0.6rem;
-            margin: 1.25rem auto 1.875rem auto;
-            box-shadow: 0 0 1.25rem gold;
-        }
-
-        /* Flexbox used to display the navigation in a one-dimensional row */
-        nav {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            grid-row: 2;
-            margin-bottom: 1.25rem;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5em;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        /* Css for the navigation options */
-        nav a {
-            color: gold;
-            text-decoration: none;
-            font-size: 1.125rem;
-            font-weight: 500;
-            padding: 0.6em 0.85em;
-            border-radius: 0.3em;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Css to show the user that they are hovering over a navigation option */
-        nav a:hover {
-            background-color: blue;
-            color: white;
-        }
-
-        /* Css for the main section */
-        main {
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            padding: 2.5rem;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        /* Css to display the footer in a grid */
-        footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2em;
-            padding: 1.5rem;
-            border-top: 0.0625rem solid gold;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        footer section {
-            display: grid;
-            gap: 0.6em;
-        }
-
-        footer li {
-            list-style: none;
-            color: white;
-            font-size: 1rem;
-        }
-
-        /* Responsive design for tablets */
-        @media (max-width: 60em) {
-
-            header {
-                padding: 1.5rem;
-            }
-
-            header img {
-                width: 50%;
-            }
-
-            header img[src="Restaurant.jpg"] {
-                width: 90%;
-            }
-
-            nav ul {
-                gap: 1em;
-            }
-
-            nav a {
-                font-size: 1rem;
-            }
-
-            main {
-                padding: 2rem;
-            }
-
-            footer {
-                gap: 1.5em;
-            }
-        }
-
-        /* Responsive design for phones */
-        @media (max-width: 40em) {
-
-            header {
-                padding: 1rem;
-            }
-
-            header img {
-                width: 70%;
-            }
-
-            header img[src="Restaurant.jpg"] {
-                width: 100%;
-                margin: 1rem auto 1.5rem auto;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0.5em;
-            }
-
-            nav a {
-                display: block;
-                font-size: 1rem;
-                padding: 0.6em 1em;
-            }
-
-            main {
-                padding: 1.5rem;
-            }
-
-            footer {
-                grid-template-columns: 1fr;
-                gap: 1em;
-                padding: 1.25rem;
-            }
-        }
-    </style>
-</head>    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+          rel="stylesheet">
+</head>
 
 <body>
-    <header> <!--Every page will have the same content for the header-->
+
+    <header class="site-header">
 
         <!-- Responsive logo -->
-        <picture>
+        <picture class="logo-picture">
+
             <source
                 media="(max-width: 40em)"
-                srcset="logo.jpg"
-                sizes="70vw">
+                srcset="logo.jpg">
 
             <source
                 media="(max-width: 60em)"
-                srcset="logo.jpg"
-                sizes="50vw">
+                srcset="logo.jpg">
 
             <img
                 src="logo.jpg"
@@ -228,30 +46,46 @@
                        45vw"
                 width="350"
                 height="300"
-                alt="VillaSerenita's logo">
+                alt="VillaSerenita restaurant logo">
         </picture>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li> <!--Creating links to go to the home section-->
-                <li><a href="about.html ">About Us</a></li> <!--Creating links to go to the about us section-->
-                <li><a href="enquiries.html"> Help</a></li> <!--Creating links to go to the help section--> 
-                <li><a href="contacts.html ">Contact information</a></li> <!--Creating links to go to the contact information-->
-                <li><a href="products.html"> Courses</a></li> <!--Creating links to go to the courses page-->
+        <!-- Nav links -->
+        <nav aria-label="Main navigation">
+            <ul class="navigation-list">
+
+                <li>
+                    <a href="index.html" aria-current="page">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="enquiries.html">Help</a>
+                </li>
+
+                <li>
+                    <a href="contacts.html">Contact Information</a>
+                </li>
+
+                <li>
+                    <a href="products.html">Courses</a>
+                </li>
+
             </ul>
         </nav>
 
-        <!-- Responsive Restaurant image -->
-        <picture>
+        <!-- Responsive restaurant image -->
+        <picture class="restaurant-picture">
+
             <source
                 media="(max-width: 40em)"
-                srcset="Restaurant.jpg"
-                sizes="100vw">
+                srcset="Restaurant.jpg">
 
             <source
                 media="(max-width: 60em)"
-                srcset="Restaurant.jpg"
-                sizes="90vw">
+                srcset="Restaurant.jpg">
 
             <img
                 src="Restaurant.jpg"
@@ -263,25 +97,72 @@
                        80vw"
                 width="800"
                 height="600"
-                alt="VillaSerenita's restaurant">
+                alt="Interior of VillaSerenita restaurant">
         </picture>
 
     </header>
 
-    <main> <!--each page will have different information here-->
+    
+    <main class="home-main">
+        VillaSerenita strives to bring quality service everytime
+       
+
     </main>
 
-    <footer><!--every page will have the same information in the footer-->
-        <section>
-            <!-- phone number, the address will go here-->
-             <li>+27 64 734 8955</li>
-             <li>VillaSerenitaEat@gmail.com</li>
+    
+    <footer class="site-footer">
+
+        <!-- Contact information -->
+        <section class="footer-section">
+
+            <h2 class="footer-heading">Contact Information</h2>
+
+            <ul class="footer-list">
+
+                <li>
+                    <a href="tel:+27647348955">
+                        +27 64 734 8955
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:VillaSerenitaEat@gmail.com">
+                        VillaSerenitaEat@gmail.com
+                    </a>
+                </li>
+
+            </ul>
+
         </section>
 
-        <section>
-          <li> https://instagram.comVillaSerenita</li> <!-- social media links-->
-           <li>https://Tiktok.comVillaSerenita</li>
+        <!-- Social media information -->
+        <section class="footer-section">
+
+            <h2 class="footer-heading">Follow Us</h2>
+
+            <ul class="footer-list">
+
+                <li>
+                    <a href="https://instagram.com/VillaSerenita"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://tiktok.com/@VillaSerenita"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        TikTok
+                    </a>
+                </li>
+
+            </ul>
+
         </section>
+
     </footer>
+
 </body>
 </html>

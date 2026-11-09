@@ -34,175 +34,356 @@
         } 
 
      
-        /*Index.html CSS*/
+        
+/* Page styling for Index page */
 
-         header img {
-            display: block;
-            margin: 0 auto 20px auto;
-            width: 350px;
-            height: 300px;
-            object-fit: contain;
-        }
+* {
+    box-sizing: border-box;
+}
 
-          header img[src="Restaurant.jpg"] {
-            width: 800px;
-            height: 600px;
-            object-fit: cover;
-            border: 3px solid gold;
-            border-radius: 10px;
-            margin: 20px auto 30px auto;
-            box-shadow: 0 0 20px gold;
-        }
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5em;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
+    font-family: 'Fredoka', sans-serif;
 
-             footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            padding: 25px;
-            border-top: 1px solid gold;
-            text-align: center;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 
-             /*Index.html Responsive design*/
-        @media (max-width: 60em) {
+    min-height: 100vh;
+    width: 100%;
+}
 
-            header {
-                padding: 1.5rem;
-            }
 
-            header img {
-                width: 50%;
-            }
 
-            header img[src="Restaurant.jpg"] {
-                width: 90%;
-            }
+.site-header {
+    display: grid;
+    justify-items: center;
+    text-align: center;
 
-            nav ul {
-                gap: 1em;
-            }
+    padding: 2rem;
+    width: 100%;
+}
 
-            nav a {
-                font-size: 1rem;
-            }
+/* Logo */
 
-            main {
-                padding: 2rem;
-            }
+.logo-picture {
+    display: block;
+    grid-row: 1;
 
-            footer {
-                gap: 1.5em;
-            }
-        }
+    width: 45%;
+    max-width: 350px;
 
-       
-        @media (max-width: 40em) {
+    margin: 0 auto 1.25rem;
+}
 
-            header {
-                padding: 1rem;
-            }
+.logo-picture img {
+    display: block;
 
-            header img {
-                width: 70%;
-            }
+    width: 100%;
+    height: auto;
 
-            header img[src="Restaurant.jpg"] {
-                width: 100%;
-                margin: 1rem auto 1.5rem auto;
-            }
+    object-fit: contain;
+}
 
-            nav ul {
-                flex-direction: column;
-                gap: 0.5em;
-            }
+/*Navigation */
 
-            nav a {
-                display: block;
-                font-size: 1rem;
-                padding: 0.6em 1em;
-            }
+nav {
+    display: flex;
+    justify-content: center;
 
-            main {
-                padding: 1.5rem;
-            }
+    grid-row: 2;
 
-            footer {
-                grid-template-columns: 1fr;
-                gap: 1em;
-                padding: 1.25rem;
-            }
-        }
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
 
-        }
+.navigation-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-        footer section {
-            display: grid;
-            gap: 10px;
-        }
+    gap: 1.5rem;
 
-        footer li {
-            list-style: none;
-            color: white;
-        }
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-        <picture>
-            <source
-                media="(max-width: 40em)"
-                srcset="logo.jpg"
-                sizes="70vw">
+    width: 100%;
+}
 
-            <source
-                media="(max-width: 60em)"
-                srcset="logo.jpg"
-                sizes="50vw">
+nav a {
+    display: block;
 
-            <img
-                src="logo.jpg"
-                srcset="logo.jpg 350w,
-                        logo.jpg 700w,
-                        logo.jpg 1050w"
-                sizes="(max-width: 40em) 70vw,
-                       (max-width: 60em) 50vw,
-                       45vw"
-                width="350"
-                height="300"
-                alt="VillaSerenita's logo">
-        </picture>
+    color: gold;
+    text-decoration: none;
 
-        <picture>
-            <source
-                media="(max-width: 40em)"
-                srcset="Restaurant.jpg"
-                sizes="100vw">
+    font-size: 1.125rem;
+    font-weight: 500;
 
-            <source
-                media="(max-width: 60em)"
-                srcset="Restaurant.jpg"
-                sizes="90vw">
+    padding: 0.6em 0.85em;
+    border-radius: 0.3em;
 
-            <img
-                src="Restaurant.jpg"
-                srcset="Restaurant.jpg 600w,
-                        Restaurant.jpg 900w,
-                        Restaurant.jpg 1200w"
-                sizes="(max-width: 40em) 100vw,
-                       (max-width: 60em) 90vw,
-                       80vw"
-                width="800"
-                height="600"
-                alt="VillaSerenita's restaurant">
-        </picture>
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Navigation hover */
+
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation keyboard focus */
+
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation active */
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+/* Current page */
+
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
+
+/* Restaurant image */
+
+.restaurant-picture {
+    display: block;
+
+    grid-row: 3;
+
+    width: 80%;
+    max-width: 800px;
+
+    margin: 1.25rem auto 1.875rem;
+}
+
+.restaurant-picture img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+    border: 0.2rem solid gold;
+    border-radius: 0.6rem;
+
+    box-shadow: 0 0 1.25rem gold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+
+/* MAIN SECTION */
+
+.home-main {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    padding: 2.5rem;
+    width: 100%;
+}
+
+/* FOOTER */
+
+.site-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2rem;
+
+    padding: 1.5rem;
+
+    border-top: 0.0625rem solid gold;
+
+    text-align: center;
+    width: 100%;
+}
+
+/* Footer sections */
+
+.footer-section {
+    display: grid;
+    justify-items: center;
+
+    gap: 0.6rem;
+}
+
+/* Footer headings */
+
+.footer-heading {
+    color: gold;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Footer lists */
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 0.6rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Footer list items */
+
+.footer-list li {
+    list-style: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Footer links */
+
+.footer-list a {
+    color: white;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+/* Footer hover */
+
+.footer-list a:hover {
+    color: gold;
+}
+
+/* Footer focus */
+
+.footer-list a:focus-visible {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.25rem;
+}
+
+/* Footer active */
+
+.footer-list a:active {
+    color: gold;
+}
+
+/* Tablet responsive design */
+
+@media (max-width: 60em) {
+
+    .site-header {
+        padding: 1.5rem;
+    }
+
+    .logo-picture {
+        width: 50%;
+    }
+
+    .restaurant-picture {
+        width: 90%;
+    }
+
+    .navigation-list {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .home-main {
+        padding: 2rem;
+    }
+
+    .site-footer {
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 40em) {
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    .logo-picture {
+        width: 70%;
+    }
+
+    .restaurant-picture {
+        width: 100%;
+        margin: 1rem auto 1.5rem;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+
+    .home-main {
+        padding: 1.5rem;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+        padding: 1.25rem;
+    }
+}
+
+/* Accessibility */
+
+/* Visible keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Reduced motion support */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
 
         /*About.html CSS*/
 
