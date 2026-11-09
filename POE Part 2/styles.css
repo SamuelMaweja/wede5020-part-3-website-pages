@@ -480,127 +480,397 @@
                 alt="image of General Manager">
         </picture>
 
-        /*Contact.html Css*/
-         main {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex: 1;
-            padding: 50px;
-            text-align: center;
-        }
+       
+/*Contact page styling*/
 
-         main li {
-            list-style: none;
-            color: white;
-            font-size: 22px;
-            padding: 15px 30px;
-            border: 2px solid gold;
-            border-radius: 10px;
-            min-width: 350px;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            border-top: 1px solid gold;
-        }
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
 
-         footer section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
+    display: flex;
+    flex-direction: column;
 
-          footer li {
-            list-style: none;
-            color: white;
-            font-size: 16px;
-        }
-        
-         /* Contacts.html Responsive design */
-        @media (max-width: 60em) {
+    min-height: 100vh;
+    width: 100%;
+}
 
-            header {
-                padding: 1.5rem;
-            }
 
-            header h1 {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-            }
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
-            nav ul {
-                gap: 1em;
-            }
+    padding: 2rem;
+    width: 100%;
+}
 
-            nav a {
-                font-size: 1rem;
-                padding: 0.6em 0.8em;
-            }
+.page-title {
+    color: gold;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
 
-            main {
-                padding: 2.5rem;
-            }
 
-            main li {
-                width: 75%;
-                font-size: 1.2rem;
-            }
 
-            footer {
-                padding: 1.5rem;
-            }
-        }
 
-        
-        @media (max-width: 40em) {
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
-            header {
-                padding: 1rem;
-            }
+.navigation-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-            header h1 {
-                font-size: 1.7rem;
-                margin-bottom: 1.5rem;
-            }
+    gap: 1.5rem;
 
-            nav ul {
-                flex-direction: column;
-                gap: 0.5em;
-            }
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
 
-            nav a {
-                display: block;
-                font-size: 1rem;
-                padding: 0.6em 1em;
-            }
+nav a {
+    display: block;
 
-            main {
-                padding: 2rem 1rem;
-                gap: 1em;
-            }
+    color: gold;
+    text-decoration: none;
 
-            main li {
-                width: 95%;
-                min-width: 0;
-                font-size: 1.05rem;
-                padding: 0.8em 1em;
-            }
+    font-size: 1.125rem;
+    font-weight: 500;
 
-            footer {
-                padding: 1.25rem 1rem;
-            }
+    padding: 0.6em 0.9em;
+    border-radius: 0.3em;
 
-            footer li {
-                font-size: 0.95rem;
-            }
-        }
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Navigation hover */
+
+nav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation focus */
+
+nav a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+    background-color: blue;
+    color: white;
+}
+
+/* Navigation active */
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+/* Current page */
+
+nav a[aria-current="page"] {
+    border: 0.0625rem solid gold;
+}
+
+/* Contact section */
+
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.25rem;
+
+    flex: 1;
+    padding: 3.125rem;
+
+    text-align: center;
+    width: 100%;
+}
+
+.section-title {
+    color: gold;
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+}
+
+
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.25rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Contact information */
+
+.contact-item {
+    list-style: none;
+
+    color: white;
+    font-size: 1.375rem;
+
+    padding: 0.75em 1.5em;
+
+    border: 0.125rem solid gold;
+    border-radius: 0.6rem;
+
+    width: 60%;
+    max-width: 31.25rem;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Contact hover */
+
+.contact-item:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 1rem gold;
+    border-color: white;
+}
+
+/* Contact links */
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: gold;
+}
+
+/* Contact keyboard focus */
+
+.contact-item a:focus-visible {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.3rem;
+}
+
+/* Contact active */
+
+.contact-item a:active {
+    color: gold;
+}
+
+
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.875rem;
+
+    border-top: 0.0625rem solid gold;
+
+    width: 100%;
+}
+
+/* Social media section */
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.footer-title {
+    color: gold;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Social media list */
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-list li {
+    list-style: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Social media links */
+
+.social-list a {
+    color: white;
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.social-list a:hover {
+    color: gold;
+}
+
+.social-list a:focus-visible {
+    outline: 0.2rem solid gold;
+    outline-offset: 0.25rem;
+}
+
+.social-list a:active {
+    color: white;
+    transform: scale(0.95);
+}
+
+/*Tablet responsive design */
+
+@media (max-width: 60em) {
+
+    .site-header {
+        padding: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .navigation-list {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.6em 0.8em;
+    }
+
+    .contact-main {
+        padding: 2.5rem;
+    }
+
+    .contact-item {
+        width: 75%;
+        font-size: 1.2rem;
+    }
+
+    .site-footer {
+        padding: 1.5rem;
+    }
+}
+
+/*Mobile responsive design */
+
+@media (max-width: 40em) {
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1rem;
+        padding: 0.6em 1em;
+    }
+
+    .contact-main {
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-item {
+        width: 95%;
+        min-width: 0;
+
+        font-size: 1.05rem;
+        padding: 0.8em 1em;
+    }
+
+    .site-footer {
+        padding: 1.25rem 1rem;
+    }
+
+    .social-list {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .social-list li {
+        font-size: 0.95rem;
+    }
+}
+
+/*Accessibility */
+
+/* Visible keyboard focus */
+
+a:focus-visible {
+    outline: 0.2rem solid white;
+    outline-offset: 0.25rem;
+}
+
+/* Reduced motion for accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
         /*Enquiries.html Css*/
 
         main p {
